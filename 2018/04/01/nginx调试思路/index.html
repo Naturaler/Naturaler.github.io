@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   
   
+  <meta name="description" content="调试nginx匹配规则的一个思路思路简介：通过rewrite方法，将匹配结果rewrite为指定内容，根据最终结果达到日志输出的效果
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546" />
+  
 
   
   
@@ -11,15 +14,20 @@
   
   
   
-  <title>Hexo</title>
+  <title>nginx调试思路 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="调试nginx匹配规则的一个思路思路简介：通过rewrite方法，将匹配结果rewrite为指定内容，根据最终结果达到日志输出的效果 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071">
+<meta name="keywords" content="nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx调试思路">
+<meta property="og:url" content="http://yoursite.com/2018/04/01/nginx调试思路/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="调试nginx匹配规则的一个思路思路简介：通过rewrite方法，将匹配结果rewrite为指定内容，根据最终结果达到日志输出的效果 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-01T06:58:57.356Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="nginx调试思路">
+<meta name="twitter:description" content="调试nginx匹配规则的一个思路思路简介：通过rewrite方法，将匹配结果rewrite为指定内容，根据最终结果达到日志输出的效果 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -59,17 +67,15 @@
     </nav>
 </header>
       <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main">
-  
-    <article id="post-nginx调试思路" class="post-nginx调试思路 post type-post status-publish format-standard hentry">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-nginx调试思路" class="post-nginx调试思路 post type-post status-publish format-standard hentry">
     <!---->
 
       <header class="entry-header">
         
         
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2018/04/01/nginx调试思路/">nginx调试思路</a>
+    <h1 class="entry-title article-title">
+      nginx调试思路
     </h1>
   
 
@@ -130,234 +136,20 @@
 </article>
 
 
-
-
-
-
-  
-    <article id="post-java时间格式化相关事项" class="post-java时间格式化相关事项 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2018/04/01/java时间格式化相关事项/">java时间格式化相关事项</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/01/java时间格式化相关事项/" data-id="cjfggh92w0000pwpvj7lmwzue" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h1 id="记Java时间格式化的注意事项"><a href="#记Java时间格式化的注意事项" class="headerlink" title="记Java时间格式化的注意事项"></a>记Java时间格式化的注意事项</h1><p>今天在尝试将格式不明的时间转换为标准的时间格式时，遇到了几个问题，在此记录下</p>
-<p>【需求：将格式不明的时间转换为标准格式，如将“HH:mm yyyy/MM/dd”、“HH:mm:ss”、“yyyy/MM/dd”等转换为“yyyy-MM-dd HH:mm:ss”。缺失部分用o补齐】</p>
-<h2 id="注意点1：simpledateformat"><a href="#注意点1：simpledateformat" class="headerlink" title="注意点1：simpledateformat"></a>注意点1：simpledateformat</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SimpleDateFormat format = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy/MM/dd"</span>);</span><br><span class="line"><span class="comment">// 设置以严格的格式解析string</span></span><br><span class="line">format.setLenient(<span class="keyword">false</span>);</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    Date date = format.parse(<span class="string">"2018/03/28 23:23:12"</span>);	<span class="comment">// 不会报错</span></span><br><span class="line"></span><br><span class="line">    SimpleDateFormat standardFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</span><br><span class="line">    System.out.println(standardFormat.format(date));</span><br><span class="line">&#125; <span class="keyword">catch</span> (ParseException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span>-<span class="number">03</span>-<span class="number">28</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span></span><br></pre></td></tr></table></figure></p>
-<p>很明显，结果中时分秒被忽略了。如果想精确解析未知格式的时间时，需要注意这种情况</p>
-<h2 id="注意点2：java8中的localdatetime、localdate、localtime的支持格式"><a href="#注意点2：java8中的localdatetime、localdate、localtime的支持格式" class="headerlink" title="注意点2：java8中的localdatetime、localdate、localtime的支持格式"></a>注意点2：java8中的localdatetime、localdate、localtime的支持格式</h2><p>采用了java8的java.time包下的时间类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime localDateTime = LocalDateTime.parse(datetime, DateTimeFormatter.ofPattern(<span class="string">"yyyy/MM/dd HH:mm:ss"</span>));    <span class="comment">// 只支持年月日时分秒都齐全的情况，如2018/03/28 23:23:12</span></span><br><span class="line">LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern(<span class="string">"yyyy/MM/dd"</span>));    <span class="comment">// 只支持年月日，如2018/03/28</span></span><br><span class="line">LocalTime localTime = LocalTime.parse(time, DateTimeFormatter.ofPattern(<span class="string">"HH:mm:ss"</span>));    <span class="comment">// 只支持时分秒，如23:23:12</span></span><br></pre></td></tr></table></figure></p>
-<p>若想将为止的时间格式转换为标准的格式，则需要轮询并捕获异常的方式一个个尝试</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>综上所述，如果想精确的转换时间，则应该采用java.time包下的时间类<br>小白只想到这种方案，欢迎各路大神指出错误</p>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2018/04/01/java时间格式化相关事项/">
-    <time datetime="2018-04-01T06:54:45.000Z" class="entry-date">
-        2018-04-01
-    </time>
-</a>
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
     
     
-  <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="post-mysql-group-by取第一条数据" class="post-mysql-group-by取第一条数据 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2018/04/01/mysql-group-by取第一条数据/">mysql group by取第一条数据</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/04/01/mysql-group-by取第一条数据/" data-id="cjfggh9360003pwpvjdj88uun" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h1 id="mysql：取group-by第一条数据"><a href="#mysql：取group-by第一条数据" class="headerlink" title="mysql：取group by第一条数据"></a>mysql：取group by第一条数据</h1><h2 id="示例数据（表enterprise-info）"><a href="#示例数据（表enterprise-info）" class="headerlink" title="示例数据（表enterprise_info）"></a>示例数据（表enterprise_info）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM enterprise_info;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>name</th>
-<th>gdp</th>
-<th>update_time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> 1</td>
-<td>讯腾</td>
-<td>240</td>
-<td>2018/3/31 2:49</td>
-</tr>
-<tr>
-<td> 2</td>
-<td>度百</td>
-<td>120</td>
-<td>2018/3/24 2:50</td>
-</tr>
-<tr>
-<td> 3</td>
-<td>里阿</td>
-<td>340</td>
-<td>2018/3/25 0:00</td>
-</tr>
-<tr>
-<td> 4</td>
-<td>里阿</td>
-<td>460</td>
-<td>2018/3/28 0:00</td>
-</tr>
-<tr>
-<td> 5</td>
-<td>里阿</td>
-<td>530</td>
-<td>2018/2/25 0:00</td>
-</tr>
-<tr>
-<td> 6</td>
-<td>里阿</td>
-<td>450</td>
-<td>2018/1/25 0:00</td>
-</tr>
-<tr>
-<td> 7</td>
-<td>讯腾</td>
-<td>320</td>
-<td>2018/1/12 0:00</td>
-</tr>
-<tr>
-<td> 8</td>
-<td>讯腾</td>
-<td>435</td>
-<td>2018/3/24 0:00</td>
-</tr>
-<tr>
-<td> 9</td>
-<td>讯腾</td>
-<td>564</td>
-<td>2018/2/15 0:00</td>
-</tr>
-<tr>
-<td> 10</td>
-<td>度百</td>
-<td>435</td>
-<td>2018/3/31 0:00</td>
-</tr>
-<tr>
-<td> 11</td>
-<td>度百</td>
-<td>675</td>
-<td>2018/2/22 0:00</td>
-</tr>
-<tr>
-<td> 12</td>
-<td>度百</td>
-<td>232</td>
-<td>2018/3/30 0:00</td>
-</tr>
-</tbody>
-</table>
-<p>数据说明：</p>
-<ul>
-<li>共有三个name：讯腾、度百、里阿</li>
-<li>id与update_time不是正相关的关系</li>
-</ul>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>获取三个name的最新数据，并插入到新表(n_enterprise_info)中</p>
-<h3 id="步骤一：创建新表"><a href="#步骤一：创建新表" class="headerlink" title="步骤一：创建新表"></a>步骤一：创建新表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE n_enterprise_info LIKE enterprise_info;</span><br></pre></td></tr></table></figure>
-<h3 id="步骤二：查询并插入结果"><a href="#步骤二：查询并插入结果" class="headerlink" title="步骤二：查询并插入结果"></a>步骤二：查询并插入结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO n_enterprise_info(name, gdp, update_time)  </span><br><span class="line">	SELECT en.name, en.gdp, en.update_time FROM enterprise_info en </span><br><span class="line">	JOIN (</span><br><span class="line">		SELECT name, max(update_time) up_time </span><br><span class="line">		FROM enterprise_info </span><br><span class="line">		GROUP BY name ORDER BY update_time DESC </span><br><span class="line">		) tmp </span><br><span class="line">	ON en.name = tmp.name AND en.update_time = tmp.up_time;</span><br></pre></td></tr></table></figure>
-<h3 id="结果示例"><a href="#结果示例" class="headerlink" title="结果示例"></a>结果示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM n_enterprise_info;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>name</th>
-<th>gdp</th>
-<th>update_time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> 1</td>
-<td>讯腾</td>
-<td>240</td>
-<td>2018/3/31 2:49</td>
-</tr>
-<tr>
-<td> 2</td>
-<td>里阿</td>
-<td>460</td>
-<td>2018/3/28 0:00</td>
-</tr>
-<tr>
-<td> 3</td>
-<td>度百</td>
-<td>435</td>
-<td>2018/3/31 0:00</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2018/04/01/mysql-group-by取第一条数据/">
-    <time datetime="2018-03-31T18:04:13.000Z" class="entry-date">
-        2018-04-01
-    </time>
-</a>
+        <span class="nav-next"><a href="/2018/04/01/java时间格式化相关事项/" rel="next">java时间格式化相关事项 <span class="meta-nav">→</span></a></span>
     
-    
-  <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
-
-    </footer>
-</article>
+</nav><!-- .nav-single -->
 
 
 
 
 
 
-  
-  
 
 </div></div>
         <div id="secondary" class="widget-area" role="complementary">
