@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    mysql常用时间函数
+  
+</title>
+
+<meta name="description" content="Mysql常用的时间处理函数MySQL函数对大小写不敏感姊妹篇：spark-sql常用的时间处理函数  year 1select year(&amp;apos;2018-03-03 20:30:34&amp;apos;); // 2018  month 1select month(&amp;apos;2018-03-03 20:30:34&amp;apos;); // 3  weekOfYear 1select weekOfYe">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql常用时间函数">
+<meta property="og:url" content="http://naturaler.github.io/2018/04/01/mysql常用时间函数/index.html">
+<meta property="og:site_name" content="不靠谱博客">
+<meta property="og:description" content="Mysql常用的时间处理函数MySQL函数对大小写不敏感姊妹篇：spark-sql常用的时间处理函数  year 1select year(&amp;apos;2018-03-03 20:30:34&amp;apos;); // 2018  month 1select month(&amp;apos;2018-03-03 20:30:34&amp;apos;); // 3  weekOfYear 1select weekOfYe">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-01T07:29:21.879Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql常用时间函数">
+<meta name="twitter:description" content="Mysql常用的时间处理函数MySQL函数对大小写不敏感姊妹篇：spark-sql常用的时间处理函数  year 1select year(&amp;apos;2018-03-03 20:30:34&amp;apos;); // 2018  month 1select month(&amp;apos;2018-03-03 20:30:34&amp;apos;); // 3  weekOfYear 1select weekOfYe">
+
+
+  <link rel="alternative" href="/atom.xml" title="不靠谱博客" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">不靠谱博客</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">不靠谱博客</a></h1>
+    
+      <p class="subtitle">
+        看心情更新
+      </p>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">little boy</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">category</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark-sql/">spark-sql</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">5</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/denjones/hexo-theme-chan" title="Chan" target="_blank" rel="noopener">Chan</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/denjones" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-mysql常用时间函数" class="article article-type-post">
+  
+    <h1 class="article-header">
+      mysql常用时间函数
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2018-04-01
+</span>
+
+    
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <h1 id="Mysql常用的时间处理函数"><a href="#Mysql常用的时间处理函数" class="headerlink" title="Mysql常用的时间处理函数"></a>Mysql常用的时间处理函数</h1><p><strong>MySQL函数对大小写不敏感</strong><br>姊妹篇：<a href="https://naturaler.github.io/2018/04/01/sparl-sql常用时间函数/">spark-sql常用的时间处理函数</a></p>
+<ul>
+<li><p>year</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(&apos;2018-03-03 20:30:34&apos;); // 2018</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>month</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select month(&apos;2018-03-03 20:30:34&apos;); // 3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>weekOfYear</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select weekOfYear(&apos;2018-03-03 20:30:34&apos;); // 9</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dayOfYear</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select dayOfYear(&apos;2018-03-03 20:30:34&apos;); // 62</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unixTimestamp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select unix_timestamp(&apos;2018-03-03 20:30:34&apos;); // 1520080234</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>parseToDay</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(now(), 1, 10); // 2018-03-06</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>yesterday</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(date_sub(now(), interval 1 day), 1, 10); // 2018-03-05</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>firstDayOfLastMonth</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(date_sub(now(), interval 1 month), 1, 7), &apos;-01 00:00:00&apos;); // 2018-02-01 00:00:00</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>firstDayOfThisMonth</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(now(), 1, 7), &apos;-01 00:00:00&apos;); // 2018-03-01 00:00:00</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>strToDate</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select str_to_date(&apos;20:49:23 03/06/2018&apos;, &apos;%s:%i:%H %m/%d/%Y&apos;); // 2018-03-06 23:49:20</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>nowOnYear</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(now()); // 2018</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>时间运算</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">select date_add(&apos;2018-03-03 20:30:34&apos;, INTERVAL 1 DAY); // 2018-03-04 20:30:34（加一天）</span><br><span class="line">select date_sub(&apos;2018-03-03 20:30:34&apos;, INTERVAL 1 DAY); // 2018-03-02 20:30:34（减一天）</span><br><span class="line">date_add（或date_sub）的函数格式：date_add(var1, INTERVAL var2 var3)</span><br><span class="line">参数有三个（INTERVAL是关键字）：</span><br><span class="line">	- var1：时间值，可以是date或datetime类型</span><br><span class="line">	- var2：数值，可以是正整数或负整数（如-1）</span><br><span class="line">	- var3：单位，有</span><br><span class="line">		- MICROSECOND（毫秒）</span><br><span class="line">		- SECOND（秒）</span><br><span class="line">		- MINUTE（分钟）</span><br><span class="line">		- HOUR（小时）</span><br><span class="line">		- DAY（天）</span><br><span class="line">		- WEEK（周）</span><br><span class="line">		- MONTH（月）</span><br><span class="line">		- QUARTER（季度）</span><br><span class="line">		- YEAR（年）</span><br><span class="line">		- 还有其他组合格式 [具体可参考这里](https://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_date-add)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="附：MySQL的时间格式"><a href="#附：MySQL的时间格式" class="headerlink" title="附：MySQL的时间格式"></a>附：MySQL的时间格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- %Y：年份，如2018</span><br><span class="line">- %m：月份，如03</span><br><span class="line">- %d：日期，如06</span><br><span class="line">- %H：小时，如20</span><br><span class="line">- %i：分钟，如30</span><br><span class="line">- %s：秒数，如45</span><br></pre></td></tr></table></figure>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="cc.by-sa">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        cc.hint
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2018 不靠谱博客 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    java时间格式化相关事项
+  
+</title>
+
+<meta name="description" content="记Java时间格式化的注意事项今天在尝试将格式不明的时间转换为标准的时间格式时，遇到了几个问题，在此记录下 【需求：将格式不明的时间转换为标准格式，如将“HH:mm yyyy/MM/dd”、“HH:mm:ss”、“yyyy/MM/dd”等转换为“yyyy-MM-dd HH:mm:ss”。缺失部分用o补齐】 注意点1：simpledateformat1234567891011SimpleDateFo">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java时间格式化相关事项">
+<meta property="og:url" content="http://naturaler.github.io/2018/04/01/java时间格式化相关事项/index.html">
+<meta property="og:site_name" content="不靠谱博客">
+<meta property="og:description" content="记Java时间格式化的注意事项今天在尝试将格式不明的时间转换为标准的时间格式时，遇到了几个问题，在此记录下 【需求：将格式不明的时间转换为标准格式，如将“HH:mm yyyy/MM/dd”、“HH:mm:ss”、“yyyy/MM/dd”等转换为“yyyy-MM-dd HH:mm:ss”。缺失部分用o补齐】 注意点1：simpledateformat1234567891011SimpleDateFo">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-01T06:56:59.476Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java时间格式化相关事项">
+<meta name="twitter:description" content="记Java时间格式化的注意事项今天在尝试将格式不明的时间转换为标准的时间格式时，遇到了几个问题，在此记录下 【需求：将格式不明的时间转换为标准格式，如将“HH:mm yyyy/MM/dd”、“HH:mm:ss”、“yyyy/MM/dd”等转换为“yyyy-MM-dd HH:mm:ss”。缺失部分用o补齐】 注意点1：simpledateformat1234567891011SimpleDateFo">
+
+
+  <link rel="alternative" href="/atom.xml" title="不靠谱博客" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">不靠谱博客</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">不靠谱博客</a></h1>
+    
+      <p class="subtitle">
+        看心情更新
+      </p>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">little boy</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">category</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark-sql/">spark-sql</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">5</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/denjones/hexo-theme-chan" title="Chan" target="_blank" rel="noopener">Chan</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/denjones" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-java时间格式化相关事项" class="article article-type-post">
+  
+    <h1 class="article-header">
+      java时间格式化相关事项
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2018-04-01
+</span>
+
+    
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <h1 id="记Java时间格式化的注意事项"><a href="#记Java时间格式化的注意事项" class="headerlink" title="记Java时间格式化的注意事项"></a>记Java时间格式化的注意事项</h1><p>今天在尝试将格式不明的时间转换为标准的时间格式时，遇到了几个问题，在此记录下</p>
+<p>【需求：将格式不明的时间转换为标准格式，如将“HH:mm yyyy/MM/dd”、“HH:mm:ss”、“yyyy/MM/dd”等转换为“yyyy-MM-dd HH:mm:ss”。缺失部分用o补齐】</p>
+<h2 id="注意点1：simpledateformat"><a href="#注意点1：simpledateformat" class="headerlink" title="注意点1：simpledateformat"></a>注意点1：simpledateformat</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SimpleDateFormat format = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy/MM/dd"</span>);</span><br><span class="line"><span class="comment">// 设置以严格的格式解析string</span></span><br><span class="line">format.setLenient(<span class="keyword">false</span>);</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    Date date = format.parse(<span class="string">"2018/03/28 23:23:12"</span>);	<span class="comment">// 不会报错</span></span><br><span class="line"></span><br><span class="line">    SimpleDateFormat standardFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</span><br><span class="line">    System.out.println(standardFormat.format(date));</span><br><span class="line">&#125; <span class="keyword">catch</span> (ParseException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span>-<span class="number">03</span>-<span class="number">28</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span></span><br></pre></td></tr></table></figure></p>
+<p>很明显，结果中时分秒被忽略了。如果想精确解析未知格式的时间时，需要注意这种情况</p>
+<h2 id="注意点2：java8中的localdatetime、localdate、localtime的支持格式"><a href="#注意点2：java8中的localdatetime、localdate、localtime的支持格式" class="headerlink" title="注意点2：java8中的localdatetime、localdate、localtime的支持格式"></a>注意点2：java8中的localdatetime、localdate、localtime的支持格式</h2><p>采用了java8的java.time包下的时间类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime localDateTime = LocalDateTime.parse(datetime, DateTimeFormatter.ofPattern(<span class="string">"yyyy/MM/dd HH:mm:ss"</span>));    <span class="comment">// 只支持年月日时分秒都齐全的情况，如2018/03/28 23:23:12</span></span><br><span class="line">LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern(<span class="string">"yyyy/MM/dd"</span>));    <span class="comment">// 只支持年月日，如2018/03/28</span></span><br><span class="line">LocalTime localTime = LocalTime.parse(time, DateTimeFormatter.ofPattern(<span class="string">"HH:mm:ss"</span>));    <span class="comment">// 只支持时分秒，如23:23:12</span></span><br></pre></td></tr></table></figure></p>
+<p>若想将为止的时间格式转换为标准的格式，则需要轮询并捕获异常的方式一个个尝试</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>综上所述，如果想精确的转换时间，则应该采用java.time包下的时间类<br>小白只想到这种方案，欢迎各路大神指出错误</p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="cc.by-sa">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        cc.hint
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2018 不靠谱博客 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>

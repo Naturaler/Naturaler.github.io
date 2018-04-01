@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    mysql group by取第一条数据
+  
+</title>
+
+<meta name="description" content="mysql：取group by第一条数据示例数据（表enterprise_info）1SELECT * FROM enterprise_info;    id name gdp update_time      1 讯腾 240 2018/3/31 2:49    2 度百 120 2018/3/24 2:50    3 里阿 340 2018/3/25 0:00    4 里阿 460 2018">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql group by取第一条数据">
+<meta property="og:url" content="http://naturaler.github.io/2018/04/01/mysql-group-by取第一条数据/index.html">
+<meta property="og:site_name" content="不靠谱博客">
+<meta property="og:description" content="mysql：取group by第一条数据示例数据（表enterprise_info）1SELECT * FROM enterprise_info;    id name gdp update_time      1 讯腾 240 2018/3/31 2:49    2 度百 120 2018/3/24 2:50    3 里阿 340 2018/3/25 0:00    4 里阿 460 2018">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-03-31T18:06:51.308Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql group by取第一条数据">
+<meta name="twitter:description" content="mysql：取group by第一条数据示例数据（表enterprise_info）1SELECT * FROM enterprise_info;    id name gdp update_time      1 讯腾 240 2018/3/31 2:49    2 度百 120 2018/3/24 2:50    3 里阿 340 2018/3/25 0:00    4 里阿 460 2018">
+
+
+  <link rel="alternative" href="/atom.xml" title="不靠谱博客" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">不靠谱博客</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">不靠谱博客</a></h1>
+    
+      <p class="subtitle">
+        看心情更新
+      </p>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">little boy</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">category</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark-sql/">spark-sql</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">5</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/denjones/hexo-theme-chan" title="Chan" target="_blank" rel="noopener">Chan</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/denjones" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-mysql-group-by取第一条数据" class="article article-type-post">
+  
+    <h1 class="article-header">
+      mysql group by取第一条数据
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2018-04-01
+</span>
+
+    
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <h1 id="mysql：取group-by第一条数据"><a href="#mysql：取group-by第一条数据" class="headerlink" title="mysql：取group by第一条数据"></a>mysql：取group by第一条数据</h1><h2 id="示例数据（表enterprise-info）"><a href="#示例数据（表enterprise-info）" class="headerlink" title="示例数据（表enterprise_info）"></a>示例数据（表enterprise_info）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM enterprise_info;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>gdp</th>
+<th>update_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1</td>
+<td>讯腾</td>
+<td>240</td>
+<td>2018/3/31 2:49</td>
+</tr>
+<tr>
+<td> 2</td>
+<td>度百</td>
+<td>120</td>
+<td>2018/3/24 2:50</td>
+</tr>
+<tr>
+<td> 3</td>
+<td>里阿</td>
+<td>340</td>
+<td>2018/3/25 0:00</td>
+</tr>
+<tr>
+<td> 4</td>
+<td>里阿</td>
+<td>460</td>
+<td>2018/3/28 0:00</td>
+</tr>
+<tr>
+<td> 5</td>
+<td>里阿</td>
+<td>530</td>
+<td>2018/2/25 0:00</td>
+</tr>
+<tr>
+<td> 6</td>
+<td>里阿</td>
+<td>450</td>
+<td>2018/1/25 0:00</td>
+</tr>
+<tr>
+<td> 7</td>
+<td>讯腾</td>
+<td>320</td>
+<td>2018/1/12 0:00</td>
+</tr>
+<tr>
+<td> 8</td>
+<td>讯腾</td>
+<td>435</td>
+<td>2018/3/24 0:00</td>
+</tr>
+<tr>
+<td> 9</td>
+<td>讯腾</td>
+<td>564</td>
+<td>2018/2/15 0:00</td>
+</tr>
+<tr>
+<td> 10</td>
+<td>度百</td>
+<td>435</td>
+<td>2018/3/31 0:00</td>
+</tr>
+<tr>
+<td> 11</td>
+<td>度百</td>
+<td>675</td>
+<td>2018/2/22 0:00</td>
+</tr>
+<tr>
+<td> 12</td>
+<td>度百</td>
+<td>232</td>
+<td>2018/3/30 0:00</td>
+</tr>
+</tbody>
+</table>
+<p>数据说明：</p>
+<ul>
+<li>共有三个name：讯腾、度百、里阿</li>
+<li>id与update_time不是正相关的关系</li>
+</ul>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>获取三个name的最新数据，并插入到新表(n_enterprise_info)中</p>
+<h3 id="步骤一：创建新表"><a href="#步骤一：创建新表" class="headerlink" title="步骤一：创建新表"></a>步骤一：创建新表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE n_enterprise_info LIKE enterprise_info;</span><br></pre></td></tr></table></figure>
+<h3 id="步骤二：查询并插入结果"><a href="#步骤二：查询并插入结果" class="headerlink" title="步骤二：查询并插入结果"></a>步骤二：查询并插入结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO n_enterprise_info(name, gdp, update_time)  </span><br><span class="line">	SELECT en.name, en.gdp, en.update_time FROM enterprise_info en </span><br><span class="line">	JOIN (</span><br><span class="line">		SELECT name, max(update_time) up_time </span><br><span class="line">		FROM enterprise_info </span><br><span class="line">		GROUP BY name ORDER BY update_time DESC </span><br><span class="line">		) tmp </span><br><span class="line">	ON en.name = tmp.name AND en.update_time = tmp.up_time;</span><br></pre></td></tr></table></figure>
+<h3 id="结果示例"><a href="#结果示例" class="headerlink" title="结果示例"></a>结果示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM n_enterprise_info;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>gdp</th>
+<th>update_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1</td>
+<td>讯腾</td>
+<td>240</td>
+<td>2018/3/31 2:49</td>
+</tr>
+<tr>
+<td> 2</td>
+<td>里阿</td>
+<td>460</td>
+<td>2018/3/28 0:00</td>
+</tr>
+<tr>
+<td> 3</td>
+<td>度百</td>
+<td>435</td>
+<td>2018/3/31 0:00</td>
+</tr>
+</tbody>
+</table>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="cc.by-sa">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        cc.hint
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2018 不靠谱博客 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
