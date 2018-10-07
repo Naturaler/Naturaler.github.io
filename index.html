@@ -1,790 +1,623 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-
-<title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="" />
   
-    行走的鸡汤
+  <title>行走的鸡汤</title>
+  <meta name="author" content="小白新">
   
-</title>
-
-<meta name="keywords" content="Java Linux SQL">
-<meta property="og:type" content="website">
-<meta property="og:title" content="行走的鸡汤">
-<meta property="og:url" content="http://naturaler.github.io/index.html">
-<meta property="og:site_name" content="行走的鸡汤">
-<meta property="og:locale" content="default">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="行走的鸡汤">
-
-
-  <link rel="alternative" href="/atom.xml" title="行走的鸡汤" type="application/atom+xml">
-
-
-
-  <link rel="icon" href="/favicon.png">
-
-
-<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
-<link rel="stylesheet" href="/styles/main.css">
-
-
-
-
-
-
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="行走的鸡汤"/>
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="行走的鸡汤" type="application/atom+xml">
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
-<body
+
+<body>
+  <a id="top"></a>
+  <div id="main">
+    <div class="behind">
+      <a href="/" class="back black-color">
+        <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M2 30 L30 2 M30 30 L2 2"></path>
+        </svg>
+      </a>
+      <div class="description">
+        &nbsp;看心情更新
+      </div>
+    </div>
+    <div class="main-ctnr">
+      <nav class="navigator"><nav class="navbar navbar-default navbar-fixed-top">
+  <div class="nav-container">
+
+
   
-    class="monochrome"
-  
-  >
-  <div class="mobile-header">
-  <button class="sidebar-toggle" type="button">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="title" href="/">行走的鸡汤</a>
+  <div id="site_search" class="">
+  <input type="text" id="local-search-input" name="q" placeholder="search" class="form-control"/>
 </div>
+<div id="local-search-result"></div>
 
-  <div class="main-container">
-    <div class="sidebar">
-  <div class="header">
-    <h1 class="title"><a href="/">行走的鸡汤</a></h1>
-    
-      <p class="subtitle">
-        看心情更新
-      </p>
-    
-    <div class="info">
-      <div class="content">
+
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+      <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <svg class="i-link" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M18 8 C18 8 24 2 27 5 30 8 29 12 24 16 19 20 16 21 14 17 M14 24 C14 24 8 30 5 27 2 24 3 20 8 16 13 12 16 11 18 15"></path>
+        </svg>
+      </a>
+      <ul class="dropdown-content">
         
-        
-          <div class="author">小白新</div>
-        
-      </div>
-      
-        <div class="avatar">
-          
-            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
-          
-        </div>
-      
-    </div>
+          <li>
+            <a href="https://github.com/XXX/">
+        Github
+      </a>
+    </li>
+     
+          <li>
+            <a href="/">
+        关于我
+      </a>
+    </li>
+     
+    </ul>
+    </li>
+    <li class="archives"><a href="/archives">
+      <svg class="i-archive" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M4 10 L4 28 28 28 28 10 M2 4 L2 10 30 10 30 4 Z M12 15 L20 15"></path>
+      </svg>
+    </a></li>
+  </ul>
   </div>
-  <div class="body">
+</nav></nav>
+<ul class="posts">
+  
     
-      
-        <ul class="nav">
-          
-            
-              <li class="category-list-container">
-                <a href="javascript:;">category</a>
-                
-              </li>
-            
-          
-            
-              <li class="tag-list-container">
-                <a href="javascript:;">tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark-sql/">spark-sql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
-              </li>
-            
-          
-            
-              <li class="archive-list-container">
-                <a href="javascript:;">archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="/" title="Homepage">Homepage</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/archives" title="By Year">By Year</a>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="https://github.com/Naturaler" title="Github" target="_blank" rel="noopener">Github</a>
-              </li>
-            
-          
-        </ul>
-      
+<div>
+<li class="post-item">
+  
+  
+    <h1 class="index-title">
+        <a href="/2018/10/07/hello-world/">
+            hello_world
+        </a>
+    </h1>
+  
+
+
+  <div class="excerpt">
+  
     
+  
+  <a href="/2018/10/07/hello-world/">
+    read_more
+  </a>
   </div>
+  <div class="index-meta">
+    
+<time datetime="2018-10-07T09:37:05.000Z" itemprop="datePublished">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  10-07
+</time>
+
+
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/test/">test</a>·<a href="/tags/hello/">hello</a>
+
+
+  </div>
+</li>
 </div>
+<hr>
 
-    <div class="main-content">
-      
-        <div style="max-width: 1000px">
-      
-          
+
+
+
 
   
+    
+<div>
+<li class="post-item">
   
-    <div class="post-list">
+  
+    <h1 class="index-title">
+        <a href="/2018/04/14/单例模式/">
+            单例模式
+        </a>
+    </h1>
   
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/04/14/单例模式/" >
-  单例模式
-</a>
 
-      </h3>
-      
+  <div class="excerpt">
+  
+    设计模式之单例模式何谓单例模式系统中有且只有一个实例的模式
+单例模式的应用
+任务管理器
+spring容器中的bean默认都是单例模式的
 
-      <div class="article-info">
-        <a href="/2018/04/14/单例模式/"><span class="article-date">
-  2018-04-14
-</span>
-</a>
-        
+单例模式的写法
+私有的构造函数
+静态成员变量
+静态的获取实例的方法
 
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
-	</span>
+饿汉模式
+加载类时即实例化对象
+
+  
+  <a href="/2018/04/14/单例模式/">
+    read_more
+  </a>
+  </div>
+  <div class="index-meta">
+    
+<time datetime="2018-04-14T01:03:42.000Z" itemprop="datePublished">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  04-14
+</time>
 
 
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="设计模式之单例模式"><a href="#设计模式之单例模式" class="headerlink" title="设计模式之单例模式"></a>设计模式之单例模式</h1><h2 id="何谓单例模式"><a href="#何谓单例模式" class="headerlink" title="何谓单例模式"></a>何谓单例模式</h2><p>系统中有且只有一个实例的模式</p>
-<h2 id="单例模式的应用"><a href="#单例模式的应用" class="headerlink" title="单例模式的应用"></a>单例模式的应用</h2><ul>
-<li>任务管理器</li>
-<li>spring容器中的bean默认都是单例模式的</li>
-</ul>
-<h2 id="单例模式的写法"><a href="#单例模式的写法" class="headerlink" title="单例模式的写法"></a>单例模式的写法</h2><ol>
-<li>私有的构造函数</li>
-<li>静态成员变量</li>
-<li>静态的获取实例的方法</li>
-</ol>
-<h3 id="饿汉模式"><a href="#饿汉模式" class="headerlink" title="饿汉模式"></a>饿汉模式</h3><ul>
-<li>加载类时即实例化对象</li>
-<li>常用于对象使用频繁且对象较小的情况</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HungrySingleton</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 静态成员变量</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> HungrySingleton instance = <span class="keyword">new</span> HungrySingleton();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 私有的构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">HungrySingleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 静态方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> HungrySingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="懒汉模式"><a href="#懒汉模式" class="headerlink" title="懒汉模式"></a>懒汉模式</h3><ul>
-<li>调用时才进行实例化（延迟加载）</li>
-<li>适用于对象较大、无需着急使用的情况</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazySingleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> LazySingleton instance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LazySingleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 实例化方法要进行同步控制，防止并发问题</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> LazySingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            instance = <span class="keyword">new</span> LazySingleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="高级懒汉模式-双重锁机制（推荐）"><a href="#高级懒汉模式-双重锁机制（推荐）" class="headerlink" title="高级懒汉模式-双重锁机制（推荐）"></a>高级懒汉模式-双重锁机制（推荐）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazySingleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> LazySingleton instance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LazySingleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> LazySingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (LazySingleton.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    instance = <span class="keyword">new</span> LazySingleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="为何要推荐双重锁机制的单例模式？"><a href="#为何要推荐双重锁机制的单例模式？" class="headerlink" title="为何要推荐双重锁机制的单例模式？"></a>为何要推荐双重锁机制的单例模式？</h3><ul>
-<li>双重锁机制基于懒汉模式的改进，有懒加载效果</li>
-<li>双重锁机制，提高了执行效率<ul>
-<li>假设要获取100次该单例对象（即执行100次<code>getInstance()</code>方法），只有第一次的<code>if (instance == null)</code> 的判断是为True，剩下99次都是False。但把整个判断过程都用<code>synchronized</code>进行同步控制，会降低执行效率</li>
-</ul>
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/设计模式/">设计模式</a>
+
+
+  </div>
 </li>
-</ul>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/04/13/装饰器模式/" >
-  装饰器模式
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/04/13/装饰器模式/"><span class="article-date">
-  2018-04-13
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="设计模式之04之装饰器模式"><a href="#设计模式之04之装饰器模式" class="headerlink" title="设计模式之04之装饰器模式"></a>设计模式之04之装饰器模式</h1><h2 id="何谓装饰器模式"><a href="#何谓装饰器模式" class="headerlink" title="何谓装饰器模式"></a>何谓装饰器模式</h2><p>装饰模式(Decorator Pattern) ：动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。</p>
-<h2 id="装饰器模式的应用"><a href="#装饰器模式的应用" class="headerlink" title="装饰器模式的应用"></a>装饰器模式的应用</h2><ul>
-<li>java io包</li>
-<li><strong>解决对象之间多对多的组合关系</strong><br>【这点很重要！如果不理解这点，容易将装饰器模式与代理模式混淆】</li>
-</ul>
-<h2 id="装饰器模式的写法"><a href="#装饰器模式的写法" class="headerlink" title="装饰器模式的写法"></a>装饰器模式的写法</h2><p>抽象饮料类：代表所有饮料<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Drink</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> String <span class="title">description</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> Double <span class="title">cost</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>咖啡<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Coffee</span> <span class="keyword">extends</span> <span class="title">Drink</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">description</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"coffee"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Double <span class="title">cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2.5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>奶茶<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tea</span> <span class="keyword">extends</span> <span class="title">Drink</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">description</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"tea"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Double <span class="title">cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>调料的父类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Seasoning</span> <span class="keyword">extends</span> <span class="title">Drink</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 饮料的成员变量，作为调料的修饰基础</span></span><br><span class="line">    <span class="keyword">protected</span> Drink drink;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Seasoning</span><span class="params">(Drink drink)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.drink = drink;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>芝士<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cheese</span> <span class="keyword">extends</span> <span class="title">Seasoning</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Cheese</span><span class="params">(Drink drink)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(drink);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">description</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> drink.description() + <span class="string">", 芝士"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Double <span class="title">cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> drink.cost() + <span class="number">3.0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>蜂蜜<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Honey</span> <span class="keyword">extends</span> <span class="title">Seasoning</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Honey</span><span class="params">(Drink drink)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(drink);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">description</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> drink.description() + <span class="string">", 蜂蜜"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Double <span class="title">cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> drink.cost() + <span class="number">0.5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>星巴克咖啡厅<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Drink coffee = <span class="keyword">new</span> Coffee();</span><br><span class="line">    coffee = <span class="keyword">new</span> Cheese(coffee);</span><br><span class="line">    coffee = <span class="keyword">new</span> Honey(coffee);</span><br><span class="line">    System.out.println(coffee.description());</span><br><span class="line">    System.out.println(coffee.cost());</span><br><span class="line"></span><br><span class="line">    Drink tea = <span class="keyword">new</span> Tea();</span><br><span class="line">    tea = <span class="keyword">new</span> Cheese(tea);</span><br><span class="line">    System.out.println(tea.description());</span><br><span class="line">    System.out.println(tea.cost());</span><br><span class="line"></span><br><span class="line">    Drink superCoffee = <span class="keyword">new</span> Coffee();</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Cheese(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Cheese(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Honey(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Honey(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Cheese(superCoffee);</span><br><span class="line">    System.out.println(superCoffee.description());</span><br><span class="line">    System.out.println(superCoffee.cost());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>下单结果：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">coffee, 芝士, 蜂蜜</span><br><span class="line"><span class="number">6.0</span></span><br><span class="line">tea, 芝士</span><br><span class="line"><span class="number">4.0</span></span><br><span class="line">coffee, 芝士, 芝士, 蜂蜜, 蜂蜜, 芝士</span><br><span class="line"><span class="number">12.5</span></span><br></pre></td></tr></table></figure></p>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/04/01/sparl-sql常用时间函数/" >
-  sparl-sql常用时间函数
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/04/01/sparl-sql常用时间函数/"><span class="article-date">
-  2018-04-01
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark-sql/">spark-sql</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="Spark-SQL常用的时间处理函数"><a href="#Spark-SQL常用的时间处理函数" class="headerlink" title="Spark-SQL常用的时间处理函数"></a>Spark-SQL常用的时间处理函数</h1><p><strong>Spark-SQL函数对大小写不敏感</strong><br>姊妹篇：<a href="https://naturaler.github.io/2018/04/01/mysql常用时间函数/">Mysql常用时间处理函数</a></p>
-<ul>
-<li><p>year</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(&apos;2018-03-03 20:30:34&apos;); // 2018</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>month</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select month(&apos;2018-03-03 20:30:34&apos;); // 3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>weekOfYear</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select weekOfYear(&apos;2018-03-03 20:30:34&apos;); // 9</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>dayOfYear</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select dayOfYear(&apos;2018-03-03 20:30:34&apos;); // 62</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unixTimestamp</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select unix_timestamp(&apos;2018-03-03 20:30:34&apos;); // 1520080234</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>parseToDay</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(now(), 1, 10); // 2018-03-06</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>yesterday</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(date_sub(now(), 1), 1, 10); // 2018-03-05</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>firstDayOfLastMonth</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(add_months(now(), -1), 1, 7), &apos;-01 00:00:00&apos;); // 2018-02-01 00:00:00【与mysql不同】</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>firstDayOfThisMonth</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(now(), 1, 7), &apos;-01 00:00:00&apos;); // 2018-03-01 00:00:00</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>strToDate</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select cast(unix_timestamp(&apos;03/13/2018 01:59:20&apos;, &apos;MM/dd/yyyy mm:ss:HH&apos;) as timestamp); // 2018-03-13 20:01:59【与mysql不同】</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>nowOnYear</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(now()); // 2018</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>时间运算</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select date_add(now(), 1); // 2018-03-14【加一天】</span><br><span class="line">select date_sub(now(), 1); // 2018-03-12【减一天】</span><br><span class="line">select add_months(now(), 1); // 2018-04-13【加一月】</span><br><span class="line">select add_months(now(), -1); // 2018-02-13【减一月】</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="附：Spark-SQL的时间格式【与java一致】"><a href="#附：Spark-SQL的时间格式【与java一致】" class="headerlink" title="附：Spark-SQL的时间格式【与java一致】"></a>附：Spark-SQL的时间格式【与java一致】</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- yyyy：年份，如2018</span><br><span class="line">- MM：月份，如03</span><br><span class="line">- dd：日期，如06</span><br><span class="line">- HH：小时，如20</span><br><span class="line">- mm：分钟，如30</span><br><span class="line">- ss：秒数，如45</span><br></pre></td></tr></table></figure>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/04/01/mysql常用时间函数/" >
-  mysql常用时间函数
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/04/01/mysql常用时间函数/"><span class="article-date">
-  2018-04-01
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="Mysql常用的时间处理函数"><a href="#Mysql常用的时间处理函数" class="headerlink" title="Mysql常用的时间处理函数"></a>Mysql常用的时间处理函数</h1><p><strong>MySQL函数对大小写不敏感</strong><br>姊妹篇：<a href="https://naturaler.github.io/2018/04/01/sparl-sql常用时间函数/">spark-sql常用的时间处理函数</a></p>
-<ul>
-<li><p>year</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(&apos;2018-03-03 20:30:34&apos;); // 2018</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>month</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select month(&apos;2018-03-03 20:30:34&apos;); // 3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>weekOfYear</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select weekOfYear(&apos;2018-03-03 20:30:34&apos;); // 9</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>dayOfYear</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select dayOfYear(&apos;2018-03-03 20:30:34&apos;); // 62</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unixTimestamp</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select unix_timestamp(&apos;2018-03-03 20:30:34&apos;); // 1520080234</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>parseToDay</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(now(), 1, 10); // 2018-03-06</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>yesterday</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(date_sub(now(), interval 1 day), 1, 10); // 2018-03-05</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>firstDayOfLastMonth</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(date_sub(now(), interval 1 month), 1, 7), &apos;-01 00:00:00&apos;); // 2018-02-01 00:00:00</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>firstDayOfThisMonth</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(now(), 1, 7), &apos;-01 00:00:00&apos;); // 2018-03-01 00:00:00</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>strToDate</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select str_to_date(&apos;20:49:23 03/06/2018&apos;, &apos;%s:%i:%H %m/%d/%Y&apos;); // 2018-03-06 23:49:20</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>nowOnYear</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(now()); // 2018</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>时间运算</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">select date_add(&apos;2018-03-03 20:30:34&apos;, INTERVAL 1 DAY); // 2018-03-04 20:30:34（加一天）</span><br><span class="line">select date_sub(&apos;2018-03-03 20:30:34&apos;, INTERVAL 1 DAY); // 2018-03-02 20:30:34（减一天）</span><br><span class="line">date_add（或date_sub）的函数格式：date_add(var1, INTERVAL var2 var3)</span><br><span class="line">参数有三个（INTERVAL是关键字）：</span><br><span class="line">	- var1：时间值，可以是date或datetime类型</span><br><span class="line">	- var2：数值，可以是正整数或负整数（如-1）</span><br><span class="line">	- var3：单位，有</span><br><span class="line">		- MICROSECOND（毫秒）</span><br><span class="line">		- SECOND（秒）</span><br><span class="line">		- MINUTE（分钟）</span><br><span class="line">		- HOUR（小时）</span><br><span class="line">		- DAY（天）</span><br><span class="line">		- WEEK（周）</span><br><span class="line">		- MONTH（月）</span><br><span class="line">		- QUARTER（季度）</span><br><span class="line">		- YEAR（年）</span><br><span class="line">		- 还有其他组合格式 [具体可参考这里](https://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_date-add)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="附：MySQL的时间格式"><a href="#附：MySQL的时间格式" class="headerlink" title="附：MySQL的时间格式"></a>附：MySQL的时间格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- %Y：年份，如2018</span><br><span class="line">- %m：月份，如03</span><br><span class="line">- %d：日期，如06</span><br><span class="line">- %H：小时，如20</span><br><span class="line">- %i：分钟，如30</span><br><span class="line">- %s：秒数，如45</span><br></pre></td></tr></table></figure>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/04/01/nginx调试思路/" >
-  nginx调试思路
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/04/01/nginx调试思路/"><span class="article-date">
-  2018-04-01
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="调试nginx匹配规则的一个思路"><a href="#调试nginx匹配规则的一个思路" class="headerlink" title="调试nginx匹配规则的一个思路"></a>调试nginx匹配规则的一个思路</h1><p><strong>思路简介：通过rewrite方法，将匹配结果rewrite为指定内容，根据最终结果达到日志输出的效果</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">#error_log  logs/error.log;</span><br><span class="line">#error_log  logs/error.log  notice;</span><br><span class="line">#error_log  logs/error.log  info;</span><br><span class="line"></span><br><span class="line">#pid        logs/nginx.pid;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    #log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">    #                  &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">    #                  &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span><br><span class="line"></span><br><span class="line">    #access_log  logs/access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line">    #keepalive_timeout  0;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line"></span><br><span class="line">    #gzip  on;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       9089;</span><br><span class="line">        server_name  localhost;</span><br><span class="line">	# root /usr/local/html;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line"></span><br><span class="line">        #access_log  logs/host.access.log  main;</span><br><span class="line"></span><br><span class="line">	#location / &#123;</span><br><span class="line">	#	root /usr/local/html;</span><br><span class="line">	#&#125;</span><br><span class="line"></span><br><span class="line">	location = /abc &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /a;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location /abc &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /b;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location /abcd &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /c;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location ^~ /abcde &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /d;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location ~ /abcdef &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /e;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location ~* /abcdefg &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /f;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location ~* /abcdf &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /g;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location ~ /abcdfgh &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /h;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location ~ /abcdgh &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /i;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location ~* /abcdgh &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[a-z].*&apos; /j;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	location ~* \.txt &#123;</span><br><span class="line">            root   /usr/local/html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">	location ^~ /ffhh &#123;</span><br><span class="line">		root /usr/local/html;</span><br><span class="line">		rewrite &apos;^/[fh].*&apos; /k;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">        #error_page  404              /404.html;</span><br><span class="line"></span><br><span class="line">        # redirect server error pages to the static page /50x.html</span><br><span class="line">        #</span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        # proxy the PHP scripts to Apache listening on 127.0.0.1:80</span><br><span class="line">        #</span><br><span class="line">        #location ~ \.php$ &#123;</span><br><span class="line">        #    proxy_pass   http://127.0.0.1;</span><br><span class="line">        #&#125;</span><br><span class="line"></span><br><span class="line">        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span><br><span class="line">        #</span><br><span class="line">        #location ~ \.php$ &#123;</span><br><span class="line">        #    root           html;</span><br><span class="line">        #    fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">        #    fastcgi_index  index.php;</span><br><span class="line">        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span><br><span class="line">        #    include        fastcgi_params;</span><br><span class="line">        #&#125;</span><br><span class="line"></span><br><span class="line">        # deny access to .htaccess files, if Apache&apos;s document root</span><br><span class="line">        # concurs with nginx&apos;s one</span><br><span class="line">        #</span><br><span class="line">        #location ~ /\.ht &#123;</span><br><span class="line">        #    deny  all;</span><br><span class="line">        #&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    # another virtual host using mix of IP-, name-, and port-based configuration</span><br><span class="line">    #</span><br><span class="line">    #server &#123;</span><br><span class="line">    #    listen       8000;</span><br><span class="line">    #    listen       somename:8080;</span><br><span class="line">    #    server_name  somename  alias  another.alias;</span><br><span class="line"></span><br><span class="line">    #    location / &#123;</span><br><span class="line">    #        root   html;</span><br><span class="line">    #        index  index.html index.htm;</span><br><span class="line">    #    &#125;</span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    # HTTPS server</span><br><span class="line">    #</span><br><span class="line">    #server &#123;</span><br><span class="line">    #    listen       443 ssl;</span><br><span class="line">    #    server_name  localhost;</span><br><span class="line"></span><br><span class="line">    #    ssl_certificate      cert.pem;</span><br><span class="line">    #    ssl_certificate_key  cert.key;</span><br><span class="line"></span><br><span class="line">    #    ssl_session_cache    shared:SSL:1m;</span><br><span class="line">    #    ssl_session_timeout  5m;</span><br><span class="line"></span><br><span class="line">    #    ssl_ciphers  HIGH:!aNULL:!MD5;</span><br><span class="line">    #    ssl_prefer_server_ciphers  on;</span><br><span class="line"></span><br><span class="line">    #    location / &#123;</span><br><span class="line">    #        root   html;</span><br><span class="line">    #        index  index.html index.htm;</span><br><span class="line">    #    &#125;</span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结果页a的内容：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>welcome<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>----------------- a -----------------<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello world ! where are you from ?<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>结果页b的内容：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>welcome<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>----------------- b -----------------<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello world ! where are you from ?<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>其他c、d、e等结果页的内容类似</p>
-<p>对以上配置的执行结果示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">curl localhost:9089/abc   	  // a</span><br><span class="line">curl localhost:9089/abcll  	  // b</span><br><span class="line">curl localhost:9089/abcdll 	  // c</span><br><span class="line">curl localhost:9089/abcde  	  // d</span><br><span class="line">curl localhost:9089/abcdef 	  // d</span><br><span class="line">curl localhost:9089/abcdefll  // d</span><br><span class="line">页面e、f是不可能匹配到的了，因为都被d拦截了</span><br><span class="line">curl localhost:9089/abcdf     // g</span><br><span class="line">curl localhost:9089/abcdfgh   // g</span><br><span class="line">页面h也是不可能匹配到的了，因为都被g拦截了</span><br><span class="line">curl localhost:9089/abcdgh    // i</span><br><span class="line">页面j也是不可能匹配到的了，因为都被i拦截了</span><br></pre></td></tr></table></figure></p>
-<p>附录：<br>以下内容引用至nginx<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#location" target="_blank" rel="noopener">官方文档</a></p>
-<blockquote>
-<p>A location can either be defined by a prefix string, or by a regular expression. Regular expressions are specified with the preceding “~*” modifier (for case-insensitive matching), or the “~” modifier (for case-sensitive matching). To find location matching a given request, nginx first checks locations defined using the prefix strings (prefix locations). Among them, the location with the longest matching prefix is selected and remembered. Then regular expressions are checked, in the order of their appearance in the configuration file. The search of regular expressions terminates on the first match, and the corresponding configuration is used. If no match with a regular expression is found then the configuration of the prefix location remembered earlier is used.</p>
-</blockquote>
-<blockquote>
-<p>location blocks can be nested, with some exceptions mentioned below.</p>
-</blockquote>
-<blockquote>
-<p>For case-insensitive operating systems such as macOS and Cygwin, matching with prefix strings ignores a case (0.7.7). However, comparison is limited to one-byte locales.</p>
-</blockquote>
-<blockquote>
-<p>Regular expressions can contain captures (0.7.40) that can later be used in other directives.</p>
-</blockquote>
-<blockquote>
-<p>If the longest matching prefix location has the “^~” modifier then regular expressions are not checked.</p>
-</blockquote>
-<blockquote>
-<p>Also, using the “=” modifier it is possible to define an exact match of URI and location. If an exact match is found, the search terminates. For example, if a “/” request happens frequently, defining “location = /” will speed up the processing of these requests, as search terminates right after the first comparison. Such a location cannot obviously contain nested locations.</p>
-</blockquote>
-<p>翻译总结一下location的匹配规则：</p>
-<blockquote>
-<p>location的匹配方式可以通过字符串前缀或正则表达式的形式表示。当接收到一个请求时，nginx将按以下步骤来选择location：<br>1、nginx先按字符串前缀的形式查找匹配的location，选中并记住匹配度最长的那个location。<br>2、如果被选中的location使用了“=”修饰符，则将当前选中结果作为最终结果，停止继续查找；<br>3、如果被选中的location使用了“^~”修饰符，则将当前选中结果作为最终结果，停止继续查找；<br>4、如果被选中的location未使用“=”或“^~”修饰符，则继续查找，执行步骤5；<br>5、然后，再按照正则的定义顺序查找匹配的location，选中第一个符合要求的正则location。</p>
-</blockquote>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/04/01/java时间格式化相关事项/" >
-  java时间格式化相关事项
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/04/01/java时间格式化相关事项/"><span class="article-date">
-  2018-04-01
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="记Java时间格式化的注意事项"><a href="#记Java时间格式化的注意事项" class="headerlink" title="记Java时间格式化的注意事项"></a>记Java时间格式化的注意事项</h1><p>今天在尝试将格式不明的时间转换为标准的时间格式时，遇到了几个问题，在此记录下</p>
-<p>【需求：将格式不明的时间转换为标准格式，如将“HH:mm yyyy/MM/dd”、“HH:mm:ss”、“yyyy/MM/dd”等转换为“yyyy-MM-dd HH:mm:ss”。缺失部分用o补齐】</p>
-<h2 id="注意点1：simpledateformat"><a href="#注意点1：simpledateformat" class="headerlink" title="注意点1：simpledateformat"></a>注意点1：simpledateformat</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SimpleDateFormat format = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy/MM/dd"</span>);</span><br><span class="line"><span class="comment">// 设置以严格的格式解析string</span></span><br><span class="line">format.setLenient(<span class="keyword">false</span>);</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    Date date = format.parse(<span class="string">"2018/03/28 23:23:12"</span>);	<span class="comment">// 不会报错</span></span><br><span class="line"></span><br><span class="line">    SimpleDateFormat standardFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</span><br><span class="line">    System.out.println(standardFormat.format(date));</span><br><span class="line">&#125; <span class="keyword">catch</span> (ParseException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span>-<span class="number">03</span>-<span class="number">28</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span></span><br></pre></td></tr></table></figure></p>
-<p>很明显，结果中时分秒被忽略了。如果想精确解析未知格式的时间时，需要注意这种情况</p>
-<h2 id="注意点2：java8中的localdatetime、localdate、localtime的支持格式"><a href="#注意点2：java8中的localdatetime、localdate、localtime的支持格式" class="headerlink" title="注意点2：java8中的localdatetime、localdate、localtime的支持格式"></a>注意点2：java8中的localdatetime、localdate、localtime的支持格式</h2><p>采用了java8的java.time包下的时间类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime localDateTime = LocalDateTime.parse(datetime, DateTimeFormatter.ofPattern(<span class="string">"yyyy/MM/dd HH:mm:ss"</span>));    <span class="comment">// 只支持年月日时分秒都齐全的情况，如2018/03/28 23:23:12</span></span><br><span class="line">LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern(<span class="string">"yyyy/MM/dd"</span>));    <span class="comment">// 只支持年月日，如2018/03/28</span></span><br><span class="line">LocalTime localTime = LocalTime.parse(time, DateTimeFormatter.ofPattern(<span class="string">"HH:mm:ss"</span>));    <span class="comment">// 只支持时分秒，如23:23:12</span></span><br></pre></td></tr></table></figure></p>
-<p>若想将为止的时间格式转换为标准的格式，则需要轮询并捕获异常的方式一个个尝试</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>综上所述，如果想精确的转换时间，则应该采用java.time包下的时间类<br>小白只想到这种方案，欢迎各路大神指出错误</p>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/04/01/mysql-group-by取第一条数据/" >
-  mysql group by取第一条数据
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/04/01/mysql-group-by取第一条数据/"><span class="article-date">
-  2018-04-01
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="mysql：取group-by第一条数据"><a href="#mysql：取group-by第一条数据" class="headerlink" title="mysql：取group by第一条数据"></a>mysql：取group by第一条数据</h1><h2 id="示例数据（表enterprise-info）"><a href="#示例数据（表enterprise-info）" class="headerlink" title="示例数据（表enterprise_info）"></a>示例数据（表enterprise_info）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM enterprise_info;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>name</th>
-<th>gdp</th>
-<th>update_time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> 1</td>
-<td>讯腾</td>
-<td>240</td>
-<td>2018/3/31 2:49</td>
-</tr>
-<tr>
-<td> 2</td>
-<td>度百</td>
-<td>120</td>
-<td>2018/3/24 2:50</td>
-</tr>
-<tr>
-<td> 3</td>
-<td>里阿</td>
-<td>340</td>
-<td>2018/3/25 0:00</td>
-</tr>
-<tr>
-<td> 4</td>
-<td>里阿</td>
-<td>460</td>
-<td>2018/3/28 0:00</td>
-</tr>
-<tr>
-<td> 5</td>
-<td>里阿</td>
-<td>530</td>
-<td>2018/2/25 0:00</td>
-</tr>
-<tr>
-<td> 6</td>
-<td>里阿</td>
-<td>450</td>
-<td>2018/1/25 0:00</td>
-</tr>
-<tr>
-<td> 7</td>
-<td>讯腾</td>
-<td>320</td>
-<td>2018/1/12 0:00</td>
-</tr>
-<tr>
-<td> 8</td>
-<td>讯腾</td>
-<td>435</td>
-<td>2018/3/24 0:00</td>
-</tr>
-<tr>
-<td> 9</td>
-<td>讯腾</td>
-<td>564</td>
-<td>2018/2/15 0:00</td>
-</tr>
-<tr>
-<td> 10</td>
-<td>度百</td>
-<td>435</td>
-<td>2018/3/31 0:00</td>
-</tr>
-<tr>
-<td> 11</td>
-<td>度百</td>
-<td>675</td>
-<td>2018/2/22 0:00</td>
-</tr>
-<tr>
-<td> 12</td>
-<td>度百</td>
-<td>232</td>
-<td>2018/3/30 0:00</td>
-</tr>
-</tbody>
-</table>
-<p>数据说明：</p>
-<ul>
-<li>共有三个name：讯腾、度百、里阿</li>
-<li>id与update_time不是正相关的关系</li>
-</ul>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>获取三个name的最新数据，并插入到新表(n_enterprise_info)中</p>
-<h3 id="步骤一：创建新表"><a href="#步骤一：创建新表" class="headerlink" title="步骤一：创建新表"></a>步骤一：创建新表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE n_enterprise_info LIKE enterprise_info;</span><br></pre></td></tr></table></figure>
-<h3 id="步骤二：查询并插入结果"><a href="#步骤二：查询并插入结果" class="headerlink" title="步骤二：查询并插入结果"></a>步骤二：查询并插入结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO n_enterprise_info(name, gdp, update_time)  </span><br><span class="line">	SELECT en.name, en.gdp, en.update_time FROM enterprise_info en </span><br><span class="line">	JOIN (</span><br><span class="line">		SELECT name, max(update_time) up_time </span><br><span class="line">		FROM enterprise_info </span><br><span class="line">		GROUP BY name ORDER BY update_time DESC </span><br><span class="line">		) tmp </span><br><span class="line">	ON en.name = tmp.name AND en.update_time = tmp.up_time;</span><br></pre></td></tr></table></figure>
-<h3 id="结果示例"><a href="#结果示例" class="headerlink" title="结果示例"></a>结果示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM n_enterprise_info;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>name</th>
-<th>gdp</th>
-<th>update_time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> 1</td>
-<td>讯腾</td>
-<td>240</td>
-<td>2018/3/31 2:49</td>
-</tr>
-<tr>
-<td> 2</td>
-<td>里阿</td>
-<td>460</td>
-<td>2018/3/28 0:00</td>
-</tr>
-<tr>
-<td> 3</td>
-<td>度百</td>
-<td>435</td>
-<td>2018/3/31 0:00</td>
-</tr>
-</tbody>
-</table>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-
-
-
-
-
-          <div class="main-footer">
-  
-    © 2018 行走的鸡汤 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
-  
 </div>
+<hr>
 
-      
-        </div>
-      
+
+
+
+
+  
+    
+<div>
+<li class="post-item">
+  
+  
+    <h1 class="index-title">
+        <a href="/2018/04/13/装饰器模式/">
+            装饰器模式
+        </a>
+    </h1>
+  
+
+
+  <div class="excerpt">
+  
+    设计模式之04之装饰器模式何谓装饰器模式装饰模式(Decorator Pattern) ：动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。
+装饰器模式的应用
+java 
+  
+  <a href="/2018/04/13/装饰器模式/">
+    read_more
+  </a>
+  </div>
+  <div class="index-meta">
+    
+<time datetime="2018-04-13T15:20:34.000Z" itemprop="datePublished">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  04-13
+</time>
+
+
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/设计模式/">设计模式</a>
+
+
+  </div>
+</li>
+</div>
+<hr>
+
+
+
+
+
+  
+    
+<div>
+<li class="post-item">
+  
+  
+    <h1 class="index-title">
+        <a href="/2018/04/01/sparl-sql常用时间函数/">
+            sparl-sql常用时间函数
+        </a>
+    </h1>
+  
+
+
+  <div class="excerpt">
+  
+    Spark-SQL常用的时间处理函数Spark-SQL函数对大小写不敏感姊妹篇：Mysql常用时间处理函数
+
+year
+1select year(&apos;2018-03-03 20:30:34&apos;); // 2018
+
+mont
+  
+  <a href="/2018/04/01/sparl-sql常用时间函数/">
+    read_more
+  </a>
+  </div>
+  <div class="index-meta">
+    
+<time datetime="2018-04-01T07:26:47.000Z" itemprop="datePublished">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  04-01
+</time>
+
+
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/spark-sql/">spark-sql</a>
+
+
+  </div>
+</li>
+</div>
+<hr>
+
+
+
+
+
+  
+    
+<div>
+<li class="post-item">
+  
+  
+    <h1 class="index-title">
+        <a href="/2018/04/01/mysql常用时间函数/">
+            mysql常用时间函数
+        </a>
+    </h1>
+  
+
+
+  <div class="excerpt">
+  
+    Mysql常用的时间处理函数MySQL函数对大小写不敏感姊妹篇：spark-sql常用的时间处理函数
+
+year
+1select year(&apos;2018-03-03 20:30:34&apos;); // 2018
+
+month
+1
+  
+  <a href="/2018/04/01/mysql常用时间函数/">
+    read_more
+  </a>
+  </div>
+  <div class="index-meta">
+    
+<time datetime="2018-04-01T07:25:52.000Z" itemprop="datePublished">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  04-01
+</time>
+
+
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/mysql/">mysql</a>
+
+
+  </div>
+</li>
+</div>
+<hr>
+
+
+
+
+
+  
+    
+<div>
+<li class="post-item">
+  
+  
+    <h1 class="index-title">
+        <a href="/2018/04/01/nginx调试思路/">
+            nginx调试思路
+        </a>
+    </h1>
+  
+
+
+  <div class="excerpt">
+  
+    调试nginx匹配规则的一个思路思路简介：通过rewrite方法，将匹配结果rewrite为指定内容，根据最终结果达到日志输出的效果
+12345678910111213141516171819202122232425262728293031
+  
+  <a href="/2018/04/01/nginx调试思路/">
+    read_more
+  </a>
+  </div>
+  <div class="index-meta">
+    
+<time datetime="2018-04-01T06:58:37.000Z" itemprop="datePublished">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  04-01
+</time>
+
+
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/nginx/">nginx</a>
+
+
+  </div>
+</li>
+</div>
+<hr>
+
+
+
+
+
+  
+    
+<div>
+<li class="post-item">
+  
+  
+    <h1 class="index-title">
+        <a href="/2018/04/01/java时间格式化相关事项/">
+            java时间格式化相关事项
+        </a>
+    </h1>
+  
+
+
+  <div class="excerpt">
+  
+    记Java时间格式化的注意事项今天在尝试将格式不明的时间转换为标准的时间格式时，遇到了几个问题，在此记录下
+【需求：将格式不明的时间转换为标准格式，如将“HH:mm yyyy/MM/dd”、“HH:mm:ss”、“yyyy/MM/dd”等转
+  
+  <a href="/2018/04/01/java时间格式化相关事项/">
+    read_more
+  </a>
+  </div>
+  <div class="index-meta">
+    
+<time datetime="2018-04-01T06:54:45.000Z" itemprop="datePublished">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  04-01
+</time>
+
+
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/java/">java</a>
+
+
+  </div>
+</li>
+</div>
+<hr>
+
+
+
+
+
+  
+    
+<div>
+<li class="post-item">
+  
+  
+    <h1 class="index-title">
+        <a href="/2018/04/01/mysql-group-by取第一条数据/">
+            mysql group by取第一条数据
+        </a>
+    </h1>
+  
+
+
+  <div class="excerpt">
+  
+    mysql：取group by第一条数据示例数据（表enterprise_info）1SELECT * FROM enterprise_info;
+
+
+
+id
+name
+gdp
+update_time
+
+
+
+
+ 1
+讯腾
+240
+2018/
+  
+  <a href="/2018/04/01/mysql-group-by取第一条数据/">
+    read_more
+  </a>
+  </div>
+  <div class="index-meta">
+    
+<time datetime="2018-03-31T18:04:13.000Z" itemprop="datePublished">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  04-01
+</time>
+
+
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/mysql/">mysql</a>
+
+
+  </div>
+</li>
+</div>
+<hr>
+
+
+
+
+
+  
+</ul>
+<ul class="pager">
+    <span class="page-number current">1</span>
+</ul>
+
+
     </div>
   </div>
-  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
-  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-             It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-      <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-
-      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-      <div class="pswp__ui pswp__ui--hidden">
-
-        <div class="pswp__top-bar">
-
-          <!--  Controls are self-explanatory. Order can be changed. -->
-
-          <div class="pswp__counter"></div>
-
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-          <button class="pswp__button pswp__button--share" title="Share"></button>
-
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-          <!-- element will get class pswp__preloader--active when preloader is running -->
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
-      </div>
+  <footer class="page-footer"><div class="clearfix">
+</div>
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"></path>
+        </svg>
+        </a>
+        © 行走的鸡汤
     </div>
-  </div>
+    <div class="secondrow">
+        <a href="https://github.com/gaoryrt/hexo-theme-pln">
+        Theme Pln
+        </a>
+    </div>
+</div>
+<div class="clearfix">
+</div>
+</footer>
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
 
-  <script src="/PhotoSwipe/photoswipe.js"></script>
-  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+// disqus scripts
 
 
-<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
-<script src="/scripts/main.js"></script>
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
 
 </body>
 </html>

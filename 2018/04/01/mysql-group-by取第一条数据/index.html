@@ -1,171 +1,108 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-
-<title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="" />
   
-    mysql group by取第一条数据
+  <title>mysql group by取第一条数据</title>
+  <meta name="author" content="小白新">
+  <meta name="description" content="mysql：取group by第一条数据示例数据（表enterprise_info）1SELECT * FROM enterprise_info;
+
+
+
+id
+name
+gdp
+update_time
+
+
+
+
+ 1
+讯腾
+240
+2018/3/31 2:49
+
+
+ 2
+度百
+120
+2018/3/2">
   
-</title>
-
-<meta name="description" content="mysql：取group by第一条数据示例数据（表enterprise_info）1SELECT * FROM enterprise_info;    id name gdp update_time      1 讯腾 240 2018/3/31 2:49    2 度百 120 2018/3/24 2:50    3 里阿 340 2018/3/25 0:00    4 里阿 460 2018">
-<meta name="keywords" content="mysql">
-<meta property="og:type" content="article">
-<meta property="og:title" content="mysql group by取第一条数据">
-<meta property="og:url" content="http://naturaler.github.io/2018/04/01/mysql-group-by取第一条数据/index.html">
-<meta property="og:site_name" content="行走的鸡汤">
-<meta property="og:description" content="mysql：取group by第一条数据示例数据（表enterprise_info）1SELECT * FROM enterprise_info;    id name gdp update_time      1 讯腾 240 2018/3/31 2:49    2 度百 120 2018/3/24 2:50    3 里阿 340 2018/3/25 0:00    4 里阿 460 2018">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-03-31T18:06:51.308Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql group by取第一条数据">
-<meta name="twitter:description" content="mysql：取group by第一条数据示例数据（表enterprise_info）1SELECT * FROM enterprise_info;    id name gdp update_time      1 讯腾 240 2018/3/31 2:49    2 度百 120 2018/3/24 2:50    3 里阿 340 2018/3/25 0:00    4 里阿 460 2018">
-
-
-  <link rel="alternative" href="/atom.xml" title="行走的鸡汤" type="application/atom+xml">
-
-
-
-  <link rel="icon" href="/favicon.png">
-
-
-<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
-<link rel="stylesheet" href="/styles/main.css">
-
-
-
-
-
-
+  
+  <meta property="og:title" content="mysql group by取第一条数据"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="行走的鸡汤"/>
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="行走的鸡汤" type="application/atom+xml">
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
-<body
-  
-    class="monochrome"
-  
-  >
-  <div class="mobile-header">
-  <button class="sidebar-toggle" type="button">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="title" href="/">行走的鸡汤</a>
-</div>
 
-  <div class="main-container">
-    <div class="sidebar">
-  <div class="header">
-    <h1 class="title"><a href="/">行走的鸡汤</a></h1>
-    
-      <p class="subtitle">
-        看心情更新
-      </p>
-    
-    <div class="info">
-      <div class="content">
-        
-        
-          <div class="author">小白新</div>
-        
+<body>
+  <a id="top"></a>
+  <div id="main">
+    <div class="behind">
+      <a href="/" class="back black-color">
+        <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M2 30 L30 2 M30 30 L2 2"></path>
+        </svg>
+      </a>
+      <div class="description">
+        &nbsp;看心情更新
       </div>
-      
-        <div class="avatar">
-          
-            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
-          
-        </div>
-      
     </div>
-  </div>
-  <div class="body">
-    
+    <div class="main-ctnr">
       
-        <ul class="nav">
-          
-            
-              <li class="category-list-container">
-                <a href="javascript:;">category</a>
-                
-              </li>
-            
-          
-            
-              <li class="tag-list-container">
-                <a href="javascript:;">tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark-sql/">spark-sql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
-              </li>
-            
-          
-            
-              <li class="archive-list-container">
-                <a href="javascript:;">archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="/" title="Homepage">Homepage</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/archives" title="By Year">By Year</a>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="https://github.com/Naturaler" title="Github" target="_blank" rel="noopener">Github</a>
-              </li>
-            
-          
-        </ul>
-      
-    
-  </div>
-</div>
 
-    <div class="main-content">
+  <article class="standard post">
+    <div class="title">
       
-        <div style="max-width: 1000px">
-      
-          <article id="post-mysql-group-by取第一条数据" class="article article-type-post">
   
-    <h1 class="article-header">
-      mysql group by取第一条数据
+    <h1 class="page-title center">
+        mysql group by取第一条数据
     </h1>
   
-  
 
-  <div class="article-info">
-    <span class="article-date">
+
+    </div>
+    <div class="meta center">
+      
+<time datetime="2018-03-31T18:04:13.000Z">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
   2018-04-01
-</span>
+</time>
+
+
+
+
+
 
     
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/mysql/">mysql</a>
 
+
+    </div>
+    <hr>
     
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
-	</span>
-
-
-  </div>
-  <div class="article-entry">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mysql：取group-by第一条数据"><span class="toc-text">mysql：取group by第一条数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#示例数据（表enterprise-info）"><span class="toc-text">示例数据（表enterprise_info）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#目标"><span class="toc-text">目标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤一：创建新表"><span class="toc-text">步骤一：创建新表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤二：查询并插入结果"><span class="toc-text">步骤二：查询并插入结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结果示例"><span class="toc-text">结果示例</span></a></li></ol></li></ol></li></ol>
+    
+    <div class="picture-container">
+      
+    </div>
     <h1 id="mysql：取group-by第一条数据"><a href="#mysql：取group-by第一条数据" class="headerlink" title="mysql：取group by第一条数据"></a>mysql：取group by第一条数据</h1><h2 id="示例数据（表enterprise-info）"><a href="#示例数据（表enterprise-info）" class="headerlink" title="示例数据（表enterprise_info）"></a>示例数据（表enterprise_info）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM enterprise_info;</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
@@ -291,119 +228,66 @@
 </tbody>
 </table>
 
-  </div>
-  <footer class="article-footer">
-    
-  <div class="cc">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="cc.by-sa">
-      <img src="/images/cc/cc.png">
-      
-          <img src="/images/cc/by.png">
-        
-          <img src="/images/cc/sa.png">
-      
-      <span>
-        cc.hint
-      </span>
-    </a>
+
+  </article>
+  </script>
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <div class="busuanzi center">
+    page_read:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
+    site_read:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
+    site_visitor:&nbsp;<span id="busuanzi_value_site_uv"></span>
   </div>
 
 
     
 
-  </footer>
-</article>
 
 
 
-
-
-
-
-          <div class="main-footer">
-  
-    © 2018 行走的鸡汤 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
-  
+    </div>
+  </div>
+  <footer class="page-footer"><div class="clearfix">
 </div>
-
-      
-        </div>
-      
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"></path>
+        </svg>
+        </a>
+        © 行走的鸡汤
     </div>
-  </div>
-  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
-  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-             It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-      <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-
-      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-      <div class="pswp__ui pswp__ui--hidden">
-
-        <div class="pswp__top-bar">
-
-          <!--  Controls are self-explanatory. Order can be changed. -->
-
-          <div class="pswp__counter"></div>
-
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-          <button class="pswp__button pswp__button--share" title="Share"></button>
-
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-          <!-- element will get class pswp__preloader--active when preloader is running -->
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
-      </div>
+    <div class="secondrow">
+        <a href="https://github.com/gaoryrt/hexo-theme-pln">
+        Theme Pln
+        </a>
     </div>
-  </div>
+</div>
+<div class="clearfix">
+</div>
+</footer>
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
 
-  <script src="/PhotoSwipe/photoswipe.js"></script>
-  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+// disqus scripts
 
 
-<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
-<script src="/scripts/main.js"></script>
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
 
 </body>
 </html>

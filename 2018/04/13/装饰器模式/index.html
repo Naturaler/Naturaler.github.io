@@ -1,171 +1,90 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-
-<title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="" />
   
-    装饰器模式
+  <title>装饰器模式</title>
+  <meta name="author" content="小白新">
+  <meta name="description" content="设计模式之04之装饰器模式何谓装饰器模式装饰模式(Decorator Pattern) ：动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。
+装饰器模式的应用
+java io包
+解决对象之间多对多的组合关系【这点很重要！如果不理解">
   
-</title>
-
-<meta name="description" content="设计模式之04之装饰器模式何谓装饰器模式装饰模式(Decorator Pattern) ：动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。 装饰器模式的应用 java io包 解决对象之间多对多的组合关系【这点很重要！如果不理解这点，容易将装饰器模式与代理模式混淆】  装饰器模式的写法抽象饮料类：代表所有饮料12345publ">
-<meta name="keywords" content="设计模式">
-<meta property="og:type" content="article">
-<meta property="og:title" content="装饰器模式">
-<meta property="og:url" content="http://naturaler.github.io/2018/04/13/装饰器模式/index.html">
-<meta property="og:site_name" content="行走的鸡汤">
-<meta property="og:description" content="设计模式之04之装饰器模式何谓装饰器模式装饰模式(Decorator Pattern) ：动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。 装饰器模式的应用 java io包 解决对象之间多对多的组合关系【这点很重要！如果不理解这点，容易将装饰器模式与代理模式混淆】  装饰器模式的写法抽象饮料类：代表所有饮料12345publ">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-13T15:37:03.787Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="装饰器模式">
-<meta name="twitter:description" content="设计模式之04之装饰器模式何谓装饰器模式装饰模式(Decorator Pattern) ：动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。 装饰器模式的应用 java io包 解决对象之间多对多的组合关系【这点很重要！如果不理解这点，容易将装饰器模式与代理模式混淆】  装饰器模式的写法抽象饮料类：代表所有饮料12345publ">
-
-
-  <link rel="alternative" href="/atom.xml" title="行走的鸡汤" type="application/atom+xml">
-
-
-
-  <link rel="icon" href="/favicon.png">
-
-
-<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
-<link rel="stylesheet" href="/styles/main.css">
-
-
-
-
-
-
+  
+  <meta property="og:title" content="装饰器模式"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="行走的鸡汤"/>
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="行走的鸡汤" type="application/atom+xml">
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
-<body
-  
-    class="monochrome"
-  
-  >
-  <div class="mobile-header">
-  <button class="sidebar-toggle" type="button">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="title" href="/">行走的鸡汤</a>
-</div>
 
-  <div class="main-container">
-    <div class="sidebar">
-  <div class="header">
-    <h1 class="title"><a href="/">行走的鸡汤</a></h1>
-    
-      <p class="subtitle">
-        看心情更新
-      </p>
-    
-    <div class="info">
-      <div class="content">
-        
-        
-          <div class="author">小白新</div>
-        
+<body>
+  <a id="top"></a>
+  <div id="main">
+    <div class="behind">
+      <a href="/" class="back black-color">
+        <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M2 30 L30 2 M30 30 L2 2"></path>
+        </svg>
+      </a>
+      <div class="description">
+        &nbsp;看心情更新
       </div>
-      
-        <div class="avatar">
-          
-            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
-          
-        </div>
-      
     </div>
-  </div>
-  <div class="body">
-    
+    <div class="main-ctnr">
       
-        <ul class="nav">
-          
-            
-              <li class="category-list-container">
-                <a href="javascript:;">category</a>
-                
-              </li>
-            
-          
-            
-              <li class="tag-list-container">
-                <a href="javascript:;">tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark-sql/">spark-sql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
-              </li>
-            
-          
-            
-              <li class="archive-list-container">
-                <a href="javascript:;">archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="/" title="Homepage">Homepage</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/archives" title="By Year">By Year</a>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="https://github.com/Naturaler" title="Github" target="_blank" rel="noopener">Github</a>
-              </li>
-            
-          
-        </ul>
-      
-    
-  </div>
-</div>
 
-    <div class="main-content">
+  <article class="standard post">
+    <div class="title">
       
-        <div style="max-width: 1000px">
-      
-          <article id="post-装饰器模式" class="article article-type-post">
   
-    <h1 class="article-header">
-      装饰器模式
+    <h1 class="page-title center">
+        装饰器模式
     </h1>
   
-  
 
-  <div class="article-info">
-    <span class="article-date">
+
+    </div>
+    <div class="meta center">
+      
+<time datetime="2018-04-13T15:20:34.000Z">
+<svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
   2018-04-13
-</span>
+</time>
+
+
+
+
+
 
     
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/设计模式/">设计模式</a>
 
+
+    </div>
+    <hr>
     
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
-	</span>
-
-
-  </div>
-  <div class="article-entry">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#设计模式之04之装饰器模式"><span class="toc-text">设计模式之04之装饰器模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#何谓装饰器模式"><span class="toc-text">何谓装饰器模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#装饰器模式的应用"><span class="toc-text">装饰器模式的应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#装饰器模式的写法"><span class="toc-text">装饰器模式的写法</span></a></li></ol></li></ol>
+    
+    <div class="picture-container">
+      
+    </div>
     <h1 id="设计模式之04之装饰器模式"><a href="#设计模式之04之装饰器模式" class="headerlink" title="设计模式之04之装饰器模式"></a>设计模式之04之装饰器模式</h1><h2 id="何谓装饰器模式"><a href="#何谓装饰器模式" class="headerlink" title="何谓装饰器模式"></a>何谓装饰器模式</h2><p>装饰模式(Decorator Pattern) ：动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。</p>
 <h2 id="装饰器模式的应用"><a href="#装饰器模式的应用" class="headerlink" title="装饰器模式的应用"></a>装饰器模式的应用</h2><ul>
 <li>java io包</li>
@@ -180,119 +99,66 @@
 <p>星巴克咖啡厅<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Drink coffee = <span class="keyword">new</span> Coffee();</span><br><span class="line">    coffee = <span class="keyword">new</span> Cheese(coffee);</span><br><span class="line">    coffee = <span class="keyword">new</span> Honey(coffee);</span><br><span class="line">    System.out.println(coffee.description());</span><br><span class="line">    System.out.println(coffee.cost());</span><br><span class="line"></span><br><span class="line">    Drink tea = <span class="keyword">new</span> Tea();</span><br><span class="line">    tea = <span class="keyword">new</span> Cheese(tea);</span><br><span class="line">    System.out.println(tea.description());</span><br><span class="line">    System.out.println(tea.cost());</span><br><span class="line"></span><br><span class="line">    Drink superCoffee = <span class="keyword">new</span> Coffee();</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Cheese(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Cheese(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Honey(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Honey(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Cheese(superCoffee);</span><br><span class="line">    System.out.println(superCoffee.description());</span><br><span class="line">    System.out.println(superCoffee.cost());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>下单结果：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">coffee, 芝士, 蜂蜜</span><br><span class="line"><span class="number">6.0</span></span><br><span class="line">tea, 芝士</span><br><span class="line"><span class="number">4.0</span></span><br><span class="line">coffee, 芝士, 芝士, 蜂蜜, 蜂蜜, 芝士</span><br><span class="line"><span class="number">12.5</span></span><br></pre></td></tr></table></figure></p>
 
-  </div>
-  <footer class="article-footer">
-    
-  <div class="cc">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="cc.by-sa">
-      <img src="/images/cc/cc.png">
-      
-          <img src="/images/cc/by.png">
-        
-          <img src="/images/cc/sa.png">
-      
-      <span>
-        cc.hint
-      </span>
-    </a>
+
+  </article>
+  </script>
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <div class="busuanzi center">
+    page_read:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
+    site_read:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
+    site_visitor:&nbsp;<span id="busuanzi_value_site_uv"></span>
   </div>
 
 
     
 
-  </footer>
-</article>
 
 
 
-
-
-
-
-          <div class="main-footer">
-  
-    © 2018 行走的鸡汤 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
-  
+    </div>
+  </div>
+  <footer class="page-footer"><div class="clearfix">
 </div>
-
-      
-        </div>
-      
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"></path>
+        </svg>
+        </a>
+        © 行走的鸡汤
     </div>
-  </div>
-  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
-  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-             It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-      <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-
-      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-      <div class="pswp__ui pswp__ui--hidden">
-
-        <div class="pswp__top-bar">
-
-          <!--  Controls are self-explanatory. Order can be changed. -->
-
-          <div class="pswp__counter"></div>
-
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-          <button class="pswp__button pswp__button--share" title="Share"></button>
-
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-          <!-- element will get class pswp__preloader--active when preloader is running -->
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
-      </div>
+    <div class="secondrow">
+        <a href="https://github.com/gaoryrt/hexo-theme-pln">
+        Theme Pln
+        </a>
     </div>
-  </div>
+</div>
+<div class="clearfix">
+</div>
+</footer>
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
 
-  <script src="/PhotoSwipe/photoswipe.js"></script>
-  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+// disqus scripts
 
 
-<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
-<script src="/scripts/main.js"></script>
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
 
 </body>
 </html>
