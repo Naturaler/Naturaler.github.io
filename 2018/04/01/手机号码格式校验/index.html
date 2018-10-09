@@ -109,14 +109,14 @@
 
 
   <meta name="description" content="手机号码格式校验12345678910111213141516/** * 大陆手机号码11位数，匹配格式：前三位固定格式+后8位任意数       * 此方法中前三位格式有：       * 13+任意数       * 15+除4的任意数       * 18+除1和4的任意数       * 17+除9的任意数       * 147 */public static boolean isChi">
-<meta name="keywords" content="参数校验,手机号码">
+<meta name="keywords" content="小工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手机号码格式校验">
 <meta property="og:url" content="http://naturaler.github.io/2018/04/01/手机号码格式校验/index.html">
 <meta property="og:site_name" content="行走的鸡汤">
 <meta property="og:description" content="手机号码格式校验12345678910111213141516/** * 大陆手机号码11位数，匹配格式：前三位固定格式+后8位任意数       * 此方法中前三位格式有：       * 13+任意数       * 15+除4的任意数       * 18+除1和4的任意数       * 17+除9的任意数       * 147 */public static boolean isChi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-08T14:19:34.891Z">
+<meta property="og:updated_time" content="2018-10-09T23:42:06.259Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手机号码格式校验">
 <meta name="twitter:description" content="手机号码格式校验12345678910111213141516/** * 大陆手机号码11位数，匹配格式：前三位固定格式+后8位任意数       * 此方法中前三位格式有：       * 13+任意数       * 15+除4的任意数       * 18+除1和4的任意数       * 17+除9的任意数       * 147 */public static boolean isChi">
@@ -360,7 +360,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-10-08 22:19:34" itemprop="dateModified" datetime="2018-10-08T22:19:34+08:00">2018-10-08</time>
+                <time title="Modified: 2018-10-10 07:42:06" itemprop="dateModified" datetime="2018-10-10T07:42:06+08:00">2018-10-10</time>
               
             
           </span>
@@ -377,7 +377,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/小工具/" itemprop="url" rel="index"><span itemprop="name">小工具</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/吃饭的家伙/" itemprop="url" rel="index"><span itemprop="name">吃饭的家伙</span></a></span>
 
                 
                 
@@ -412,6 +412,7 @@
 
       
         <h1 id="手机号码格式校验"><a href="#手机号码格式校验" class="headerlink" title="手机号码格式校验"></a>手机号码格式校验</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 大陆手机号码11位数，匹配格式：前三位固定格式+后8位任意数      </span><br><span class="line"> * 此方法中前三位格式有：      </span><br><span class="line"> * 13+任意数      </span><br><span class="line"> * 15+除4的任意数      </span><br><span class="line"> * 18+除1和4的任意数      </span><br><span class="line"> * 17+除9的任意数      </span><br><span class="line"> * 147</span><br><span class="line"> */</span><br><span class="line">public static boolean isChinaPhoneLegal(String str) throws PatternSyntaxException &#123;</span><br><span class="line">    String regExp = &quot;^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\\d&#123;8&#125;$&quot;;</span><br><span class="line">    Pattern p = Pattern.compile(regExp);</span><br><span class="line">    Matcher m = p.matcher(str);</span><br><span class="line">    return m.matches();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -431,9 +432,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/参数校验/" rel="tag"># 参数校验</a>
-          
-            <a href="/tags/手机号码/" rel="tag"># 手机号码</a>
+            <a href="/tags/小工具/" rel="tag"># 小工具</a>
           
         </div>
       
@@ -446,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/01/代码整洁之道/" rel="next" title="《代码整洁之道》读后感">
-                <i class="fa fa-chevron-left"></i> 《代码整洁之道》读后感
+              <a href="/2018/04/01/邮箱格式校验/" rel="next" title="邮箱格式校验">
+                <i class="fa fa-chevron-left"></i> 邮箱格式校验
               </a>
             
           </div>
@@ -456,8 +455,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/13/装饰器模式/" rel="prev" title="装饰器模式">
-                装饰器模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/01/代码整洁之道/" rel="prev" title="《代码整洁之道》读后感">
+                《代码整洁之道》读后感 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -545,19 +544,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -586,13 +573,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
