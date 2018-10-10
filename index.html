@@ -298,6 +298,218 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://naturaler.github.io/2018/10/10/代码整洁之道/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小白新">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行走的鸡汤">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/10/代码整洁之道/" itemprop="url">
+                  《代码整洁之道》读书笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-10 22:26:47" itemprop="dateCreated datePublished" datetime="2018-10-10T22:26:47+08:00">2018-10-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-11 00:18:58" itemprop="dateModified" datetime="2018-10-11T00:18:58+08:00">2018-10-11</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/修仙之旅/" itemprop="url" rel="index"><span itemprop="name">修仙之旅</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="代码整洁之道"><a href="#代码整洁之道" class="headerlink" title="代码整洁之道"></a>代码整洁之道</h1><h2 id="如何判断代码的好坏"><a href="#如何判断代码的好坏" class="headerlink" title="如何判断代码的好坏"></a>如何判断代码的好坏</h2><p>看一段代码，无需看函数签名、参数类型等，直接看代码的命名、执行流程，就可以知道该段代码的含义，即表示该代码是好代码。<br>工作中遇到一时没看懂的代码，会去看函数签名、去看函数的内部逻辑，虽然最后都看懂了，但却花费了更多时间与精力。</p>
+<p>整洁的代码，可以更快的发现问题。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>关于代码的命名，《代码整洁之道》在第二章就详细描述了命名的各种问题。我觉得从第二章的各个小标题中，就很好的体现了有关命名的问题。在此我先列举下该章节与命名相关的小标题，如下所示：</p>
+<ul>
+<li>名副其实</li>
+<li>避免误导</li>
+<li>做有意义的区分</li>
+<li>使用读的出来的名称</li>
+<li>使用可搜索的名称</li>
+<li>避免使用编码</li>
+<li>避免思维映射</li>
+<li>类名</li>
+<li>方法名</li>
+<li>别扮可爱</li>
+<li>每个概念对应一个词</li>
+<li>别用双关语</li>
+<li>使用解决方案领域名称</li>
+<li>使用源自所涉问题领域的名称</li>
+<li>添加有意义的语境</li>
+<li>不要添加没用的语境</li>
+</ul>
+<p>如果把小标题当作函数名，每个标题下的内容作为函数内部逻辑，那么，一个整洁的代码，应该是可以直接从函数名中知道函数的意义的。从以上的小标题中，也确实能看出部分内容的含义，如名副其实、使用读的出来的名称等，但类名、方法名等几个命名，其实也就中了作者提到的命名问题。<br>除了书中提到的这16个注意点外，我觉得还应该参考团队内部已有的命名写法，毕竟代码大部分时候还是给团队内部看的。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>一个好的函数，应该是看到函数的调用，就能理解该函数的意义，无需看函数签名与函数的内部逻辑。<br>《代码整洁之道》介绍了几个要点便于我们实现上述目标：</p>
+<h3 id="1-自顶向下，每个函数一个抽象层级"><a href="#1-自顶向下，每个函数一个抽象层级" class="headerlink" title="1. 自顶向下，每个函数一个抽象层级"></a>1. 自顶向下，每个函数一个抽象层级</h3><p>同个抽象层级的逻辑放在同个代码块中。自顶向下，从整体到局部，便于理解整个逻辑。</p>
+<h3 id="2-函数参数的数量、顺序与类型"><a href="#2-函数参数的数量、顺序与类型" class="headerlink" title="2. 函数参数的数量、顺序与类型"></a>2. 函数参数的数量、顺序与类型</h3><p>入参数量越少越好。设置入参时，要考虑入参的类型和顺序，结合面向对象思想，使入参能与函数自然的融为一体，提高可读性。<br>经典示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public void makeCircle(double x, double y, double radius) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>更好的方案</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public void makeCircle(Point point, double radius) &#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>经典反面教材：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public static void assertEquals(Object expected, Object actual) &#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>此反面教材的关键点在于两个入参的顺序没有必然的联系，只能通过强制记忆记住它。</p>
+<h3 id="3-“函数”的基本规范"><a href="#3-“函数”的基本规范" class="headerlink" title="3. “函数”的基本规范"></a>3. “函数”的基本规范</h3><h4 id="3-1-无副作用"><a href="#3-1-无副作用" class="headerlink" title="3.1. 无副作用"></a>3.1. 无副作用</h4><p>什么是副作用呢？就是函数在干了本职工作外，还干了其它事情，导致状态的改变。如无法避免此问题，则应通过某种方式（如函数名、注释等）告诉函数调用者，降低问题的排查难度。同时，这种做法也违反了函数的单一职责原则。</p>
+<h4 id="3-2-通过输入，得到返回值作为输出"><a href="#3-2-通过输入，得到返回值作为输出" class="headerlink" title="3.2. 通过输入，得到返回值作为输出"></a>3.2. 通过输入，得到返回值作为输出</h4><p>我们对函数的认识，是通过返回值取得函数结果。如果不遵循此规则，则应在函数名中有所体现，减少误解。<br>如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void corvert(StringBuilder source) &#123;...&#125;</span><br><span class="line"></span><br><span class="line">corvert(source);</span><br></pre></td></tr></table></figure>
+<p>更好的写法应该是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public StringBuilder corvert(StringBuilder source) &#123;...&#125;</span><br><span class="line"></span><br><span class="line">source = corvert(source);</span><br></pre></td></tr></table></figure>
+<h4 id="3-3-要么回答什么事，要么做什么事"><a href="#3-3-要么回答什么事，要么做什么事" class="headerlink" title="3.3. 要么回答什么事，要么做什么事"></a>3.3. 要么回答什么事，要么做什么事</h4><p>一个函数应该只做一类事，要么回答什么事，要么做什么事。如果一个函数既要做什么事又要将做事的结果返回，就容易增加逻辑复杂度。<br>例如如下业务场景：要求更新数据库，更新前要先判断数据是否存在，并返回是否更新的结果<br>粗陋的写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public boolean updateDb(String name) &#123;</span><br><span class="line">	boolean exist = exist(name);</span><br><span class="line">	if (!exist) &#123;</span><br><span class="line">		dao.update(name);</span><br><span class="line">		return true;</span><br><span class="line">	&#125;</span><br><span class="line">	return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>更优雅的写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">boolean exist = exist(name);</span><br><span class="line">if (!exist) &#123;</span><br><span class="line">	updateDb(name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void updateDb(String name) &#123;</span><br><span class="line">	dao.update(name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此写法也更好的体现了抽象层次的分层效果。<br>另外，如果某操作成功时要做XXX，失败时要做YYY，可以考虑用异常来代替操作失败的状态码，毕竟异常有助于分析问题原因。</p>
+<h4 id="3-4-抽取重复代码"><a href="#3-4-抽取重复代码" class="headerlink" title="3.4. 抽取重复代码"></a>3.4. 抽取重复代码</h4><p>函数的目的之一，就是减少重复代码。重复代码只有在复制黏贴时很爽，维护起来就很郁闷了，极容易改了这个忘了那个。</p>
+<h3 id="3-5-switch语句"><a href="#3-5-switch语句" class="headerlink" title="3.5. switch语句"></a>3.5. switch语句</h3><p>对于switch语句，可以考虑用策略模式或工厂模式替换。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://naturaler.github.io/2018/10/09/神坑/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -795,6 +1007,406 @@
 <p>星巴克咖啡厅<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Drink coffee = <span class="keyword">new</span> Coffee();</span><br><span class="line">    coffee = <span class="keyword">new</span> Cheese(coffee);</span><br><span class="line">    coffee = <span class="keyword">new</span> Honey(coffee);</span><br><span class="line">    System.out.println(coffee.description());</span><br><span class="line">    System.out.println(coffee.cost());</span><br><span class="line"></span><br><span class="line">    Drink tea = <span class="keyword">new</span> Tea();</span><br><span class="line">    tea = <span class="keyword">new</span> Cheese(tea);</span><br><span class="line">    System.out.println(tea.description());</span><br><span class="line">    System.out.println(tea.cost());</span><br><span class="line"></span><br><span class="line">    Drink superCoffee = <span class="keyword">new</span> Coffee();</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Cheese(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Cheese(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Honey(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Honey(superCoffee);</span><br><span class="line">    superCoffee = <span class="keyword">new</span> Cheese(superCoffee);</span><br><span class="line">    System.out.println(superCoffee.description());</span><br><span class="line">    System.out.println(superCoffee.cost());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>下单结果：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">coffee, 芝士, 蜂蜜</span><br><span class="line"><span class="number">6.0</span></span><br><span class="line">tea, 芝士</span><br><span class="line"><span class="number">4.0</span></span><br><span class="line">coffee, 芝士, 芝士, 蜂蜜, 蜂蜜, 芝士</span><br><span class="line"><span class="number">12.5</span></span><br></pre></td></tr></table></figure></p>
 
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://naturaler.github.io/2018/04/01/sparl-sql常用时间函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小白新">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行走的鸡汤">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/01/sparl-sql常用时间函数/" itemprop="url">
+                  sparl-sql常用时间函数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-01 15:26:47" itemprop="dateCreated datePublished" datetime="2018-04-01T15:26:47+08:00">2018-04-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-10 07:37:21" itemprop="dateModified" datetime="2018-10-10T07:37:21+08:00">2018-10-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/吃饭的家伙/" itemprop="url" rel="index"><span itemprop="name">吃饭的家伙</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Spark-SQL常用的时间处理函数"><a href="#Spark-SQL常用的时间处理函数" class="headerlink" title="Spark-SQL常用的时间处理函数"></a>Spark-SQL常用的时间处理函数</h1><p><strong>Spark-SQL函数对大小写不敏感</strong><br>姊妹篇：<a href="https://naturaler.github.io/2018/04/01/mysql常用时间函数/">Mysql常用时间处理函数</a></p>
+<ul>
+<li><p>year</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(&apos;2018-03-03 20:30:34&apos;); // 2018</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>month</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select month(&apos;2018-03-03 20:30:34&apos;); // 3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>weekOfYear</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select weekOfYear(&apos;2018-03-03 20:30:34&apos;); // 9</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dayOfYear</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select dayOfYear(&apos;2018-03-03 20:30:34&apos;); // 62</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unixTimestamp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select unix_timestamp(&apos;2018-03-03 20:30:34&apos;); // 1520080234</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>parseToDay</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(now(), 1, 10); // 2018-03-06</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>yesterday</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(date_sub(now(), 1), 1, 10); // 2018-03-05</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>firstDayOfLastMonth</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(add_months(now(), -1), 1, 7), &apos;-01 00:00:00&apos;); // 2018-02-01 00:00:00【与mysql不同】</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>firstDayOfThisMonth</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(now(), 1, 7), &apos;-01 00:00:00&apos;); // 2018-03-01 00:00:00</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>strToDate</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select cast(unix_timestamp(&apos;03/13/2018 01:59:20&apos;, &apos;MM/dd/yyyy mm:ss:HH&apos;) as timestamp); // 2018-03-13 20:01:59【与mysql不同】</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>nowOnYear</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(now()); // 2018</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>时间运算</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select date_add(now(), 1); // 2018-03-14【加一天】</span><br><span class="line">select date_sub(now(), 1); // 2018-03-12【减一天】</span><br><span class="line">select add_months(now(), 1); // 2018-04-13【加一月】</span><br><span class="line">select add_months(now(), -1); // 2018-02-13【减一月】</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="附：Spark-SQL的时间格式【与java一致】"><a href="#附：Spark-SQL的时间格式【与java一致】" class="headerlink" title="附：Spark-SQL的时间格式【与java一致】"></a>附：Spark-SQL的时间格式【与java一致】</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- yyyy：年份，如2018</span><br><span class="line">- MM：月份，如03</span><br><span class="line">- dd：日期，如06</span><br><span class="line">- HH：小时，如20</span><br><span class="line">- mm：分钟，如30</span><br><span class="line">- ss：秒数，如45</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://naturaler.github.io/2018/04/01/邮箱格式校验/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小白新">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行走的鸡汤">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/01/邮箱格式校验/" itemprop="url">
+                  邮箱格式校验
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-01 15:26:47" itemprop="dateCreated datePublished" datetime="2018-04-01T15:26:47+08:00">2018-04-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-10 07:42:33" itemprop="dateModified" datetime="2018-10-10T07:42:33+08:00">2018-10-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/吃饭的家伙/" itemprop="url" rel="index"><span itemprop="name">吃饭的家伙</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="邮箱格式校验"><a href="#邮箱格式校验" class="headerlink" title="邮箱格式校验"></a>邮箱格式校验</h1><pre><code>/**
+ * 校验EMAIL格式，真为正确
+ * @return
+ * true 为格式正确
+ * &lt;br&gt;
+ * false 为格式错误
+ */
+public static boolean emailFormat(String email) {
+    boolean tag = true;
+    if (!email.matches(&quot;[\\w\\.\\-]+@([\\w\\-]+\\.)+[\\w\\-]+&quot;)) {
+        tag = false;
+    }
+    return tag;
+}
+
+public static void main(String[] args) {
+    System.out.println(emailFormat(&quot;128@132.com&quot;));
+    System.out.println(emailFormat(&quot;12.8@132.com&quot;));
+    System.out.println(emailFormat(&quot;12-8@132.com&quot;));
+    System.out.println(emailFormat(&quot;12- 8@132.com&quot;));
+    System.out.println(emailFormat(&quot;12-_8@132.com&quot;));
+}
+</code></pre>
           
         
       
@@ -1587,384 +2199,6 @@ public class IdcardValidator {
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://naturaler.github.io/2018/04/01/sparl-sql常用时间函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小白新">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行走的鸡汤">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/01/sparl-sql常用时间函数/" itemprop="url">
-                  sparl-sql常用时间函数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-04-01 15:26:47" itemprop="dateCreated datePublished" datetime="2018-04-01T15:26:47+08:00">2018-04-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-10-10 07:37:21" itemprop="dateModified" datetime="2018-10-10T07:37:21+08:00">2018-10-10</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/吃饭的家伙/" itemprop="url" rel="index"><span itemprop="name">吃饭的家伙</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Spark-SQL常用的时间处理函数"><a href="#Spark-SQL常用的时间处理函数" class="headerlink" title="Spark-SQL常用的时间处理函数"></a>Spark-SQL常用的时间处理函数</h1><p><strong>Spark-SQL函数对大小写不敏感</strong><br>姊妹篇：<a href="https://naturaler.github.io/2018/04/01/mysql常用时间函数/">Mysql常用时间处理函数</a></p>
-<ul>
-<li><p>year</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(&apos;2018-03-03 20:30:34&apos;); // 2018</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>month</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select month(&apos;2018-03-03 20:30:34&apos;); // 3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>weekOfYear</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select weekOfYear(&apos;2018-03-03 20:30:34&apos;); // 9</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>dayOfYear</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select dayOfYear(&apos;2018-03-03 20:30:34&apos;); // 62</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unixTimestamp</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select unix_timestamp(&apos;2018-03-03 20:30:34&apos;); // 1520080234</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>parseToDay</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(now(), 1, 10); // 2018-03-06</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>yesterday</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select substring(date_sub(now(), 1), 1, 10); // 2018-03-05</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>firstDayOfLastMonth</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(add_months(now(), -1), 1, 7), &apos;-01 00:00:00&apos;); // 2018-02-01 00:00:00【与mysql不同】</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>firstDayOfThisMonth</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(substring(now(), 1, 7), &apos;-01 00:00:00&apos;); // 2018-03-01 00:00:00</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>strToDate</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select cast(unix_timestamp(&apos;03/13/2018 01:59:20&apos;, &apos;MM/dd/yyyy mm:ss:HH&apos;) as timestamp); // 2018-03-13 20:01:59【与mysql不同】</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>nowOnYear</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select year(now()); // 2018</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>时间运算</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select date_add(now(), 1); // 2018-03-14【加一天】</span><br><span class="line">select date_sub(now(), 1); // 2018-03-12【减一天】</span><br><span class="line">select add_months(now(), 1); // 2018-04-13【加一月】</span><br><span class="line">select add_months(now(), -1); // 2018-02-13【减一月】</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="附：Spark-SQL的时间格式【与java一致】"><a href="#附：Spark-SQL的时间格式【与java一致】" class="headerlink" title="附：Spark-SQL的时间格式【与java一致】"></a>附：Spark-SQL的时间格式【与java一致】</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- yyyy：年份，如2018</span><br><span class="line">- MM：月份，如03</span><br><span class="line">- dd：日期，如06</span><br><span class="line">- HH：小时，如20</span><br><span class="line">- mm：分钟，如30</span><br><span class="line">- ss：秒数，如45</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://naturaler.github.io/2018/04/01/代码整洁之道/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小白新">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行走的鸡汤">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/01/代码整洁之道/" itemprop="url">
-                  《代码整洁之道》读后感
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-04-01 15:26:47" itemprop="dateCreated datePublished" datetime="2018-04-01T15:26:47+08:00">2018-04-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-10-10 07:38:59" itemprop="dateModified" datetime="2018-10-10T07:38:59+08:00">2018-10-10</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/修仙之旅/" itemprop="url" rel="index"><span itemprop="name">修仙之旅</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="代码整洁之道"><a href="#代码整洁之道" class="headerlink" title="代码整洁之道"></a>代码整洁之道</h1><h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://naturaler.github.io/2018/04/01/手机号码格式校验/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2083,197 +2317,6 @@ public class IdcardValidator {
           
             <h1 id="手机号码格式校验"><a href="#手机号码格式校验" class="headerlink" title="手机号码格式校验"></a>手机号码格式校验</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 大陆手机号码11位数，匹配格式：前三位固定格式+后8位任意数      </span><br><span class="line"> * 此方法中前三位格式有：      </span><br><span class="line"> * 13+任意数      </span><br><span class="line"> * 15+除4的任意数      </span><br><span class="line"> * 18+除1和4的任意数      </span><br><span class="line"> * 17+除9的任意数      </span><br><span class="line"> * 147</span><br><span class="line"> */</span><br><span class="line">public static boolean isChinaPhoneLegal(String str) throws PatternSyntaxException &#123;</span><br><span class="line">    String regExp = &quot;^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\\d&#123;8&#125;$&quot;;</span><br><span class="line">    Pattern p = Pattern.compile(regExp);</span><br><span class="line">    Matcher m = p.matcher(str);</span><br><span class="line">    return m.matches();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://naturaler.github.io/2018/04/01/邮箱格式校验/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小白新">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行走的鸡汤">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/01/邮箱格式校验/" itemprop="url">
-                  邮箱格式校验
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-04-01 15:26:47" itemprop="dateCreated datePublished" datetime="2018-04-01T15:26:47+08:00">2018-04-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-10-10 07:42:33" itemprop="dateModified" datetime="2018-10-10T07:42:33+08:00">2018-10-10</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/吃饭的家伙/" itemprop="url" rel="index"><span itemprop="name">吃饭的家伙</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="邮箱格式校验"><a href="#邮箱格式校验" class="headerlink" title="邮箱格式校验"></a>邮箱格式校验</h1><pre><code>/**
- * 校验EMAIL格式，真为正确
- * @return
- * true 为格式正确
- * &lt;br&gt;
- * false 为格式错误
- */
-public static boolean emailFormat(String email) {
-    boolean tag = true;
-    if (!email.matches(&quot;[\\w\\.\\-]+@([\\w\\-]+\\.)+[\\w\\-]+&quot;)) {
-        tag = false;
-    }
-    return tag;
-}
-
-public static void main(String[] args) {
-    System.out.println(emailFormat(&quot;128@132.com&quot;));
-    System.out.println(emailFormat(&quot;12.8@132.com&quot;));
-    System.out.println(emailFormat(&quot;12-8@132.com&quot;));
-    System.out.println(emailFormat(&quot;12- 8@132.com&quot;));
-    System.out.println(emailFormat(&quot;12-_8@132.com&quot;));
-}
-</code></pre>
           
         
       
