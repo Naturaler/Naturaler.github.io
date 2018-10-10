@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="行走的鸡汤">
 <meta property="og:description" content="代码整洁之道如何判断代码的好坏看一段代码，无需看函数签名、参数类型等，直接看代码的命名、执行流程，就可以知道该段代码的含义，即表示该代码是好代码。工作中遇到一时没看懂的代码，会去看函数签名、去看函数的内部逻辑，虽然最后都看懂了，但却花费了更多时间与精力。 整洁的代码，可以更快的发现问题。 命名关于代码的命名，《代码整洁之道》在第二章就详细描述了命名的各种问题。我觉得从第二章的各个小标题中，就很好的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-10T16:18:58.920Z">
+<meta property="og:updated_time" content="2018-10-10T16:24:30.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《代码整洁之道》读书笔记">
 <meta name="twitter:description" content="代码整洁之道如何判断代码的好坏看一段代码，无需看函数签名、参数类型等，直接看代码的命名、执行流程，就可以知道该段代码的含义，即表示该代码是好代码。工作中遇到一时没看懂的代码，会去看函数签名、去看函数的内部逻辑，虽然最后都看懂了，但却花费了更多时间与精力。 整洁的代码，可以更快的发现问题。 命名关于代码的命名，《代码整洁之道》在第二章就详细描述了命名的各种问题。我觉得从第二章的各个小标题中，就很好的">
@@ -360,7 +360,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-10-11 00:18:58" itemprop="dateModified" datetime="2018-10-11T00:18:58+08:00">2018-10-11</time>
+                <time title="Modified: 2018-10-11 00:24:30" itemprop="dateModified" datetime="2018-10-11T00:24:30+08:00">2018-10-11</time>
               
             
           </span>
@@ -434,26 +434,26 @@
 </ul>
 <p>如果把小标题当作函数名，每个标题下的内容作为函数内部逻辑，那么，一个整洁的代码，应该是可以直接从函数名中知道函数的意义的。从以上的小标题中，也确实能看出部分内容的含义，如名副其实、使用读的出来的名称等，但类名、方法名等几个命名，其实也就中了作者提到的命名问题。<br>除了书中提到的这16个注意点外，我觉得还应该参考团队内部已有的命名写法，毕竟代码大部分时候还是给团队内部看的。</p>
 <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>一个好的函数，应该是看到函数的调用，就能理解该函数的意义，无需看函数签名与函数的内部逻辑。<br>《代码整洁之道》介绍了几个要点便于我们实现上述目标：</p>
-<h3 id="1-自顶向下，每个函数一个抽象层级"><a href="#1-自顶向下，每个函数一个抽象层级" class="headerlink" title="1. 自顶向下，每个函数一个抽象层级"></a>1. 自顶向下，每个函数一个抽象层级</h3><p>同个抽象层级的逻辑放在同个代码块中。自顶向下，从整体到局部，便于理解整个逻辑。</p>
-<h3 id="2-函数参数的数量、顺序与类型"><a href="#2-函数参数的数量、顺序与类型" class="headerlink" title="2. 函数参数的数量、顺序与类型"></a>2. 函数参数的数量、顺序与类型</h3><p>入参数量越少越好。设置入参时，要考虑入参的类型和顺序，结合面向对象思想，使入参能与函数自然的融为一体，提高可读性。<br>经典示例：</p>
+<h3 id="自顶向下，每个函数一个抽象层级"><a href="#自顶向下，每个函数一个抽象层级" class="headerlink" title="自顶向下，每个函数一个抽象层级"></a>自顶向下，每个函数一个抽象层级</h3><p>同个抽象层级的逻辑放在同个代码块中。自顶向下，从整体到局部，便于理解整个逻辑。</p>
+<h3 id="函数参数的数量、顺序与类型"><a href="#函数参数的数量、顺序与类型" class="headerlink" title="函数参数的数量、顺序与类型"></a>函数参数的数量、顺序与类型</h3><p>入参数量越少越好。设置入参时，要考虑入参的类型和顺序，结合面向对象思想，使入参能与函数自然的融为一体，提高可读性。<br>经典示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public void makeCircle(double x, double y, double radius) &#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>更好的方案</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public void makeCircle(Point point, double radius) &#123;...&#125;</span><br></pre></td></tr></table></figure>
 <p>经典反面教材：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public static void assertEquals(Object expected, Object actual) &#123;...&#125;</span><br></pre></td></tr></table></figure>
 <p>此反面教材的关键点在于两个入参的顺序没有必然的联系，只能通过强制记忆记住它。</p>
-<h3 id="3-“函数”的基本规范"><a href="#3-“函数”的基本规范" class="headerlink" title="3. “函数”的基本规范"></a>3. “函数”的基本规范</h3><h4 id="3-1-无副作用"><a href="#3-1-无副作用" class="headerlink" title="3.1. 无副作用"></a>3.1. 无副作用</h4><p>什么是副作用呢？就是函数在干了本职工作外，还干了其它事情，导致状态的改变。如无法避免此问题，则应通过某种方式（如函数名、注释等）告诉函数调用者，降低问题的排查难度。同时，这种做法也违反了函数的单一职责原则。</p>
-<h4 id="3-2-通过输入，得到返回值作为输出"><a href="#3-2-通过输入，得到返回值作为输出" class="headerlink" title="3.2. 通过输入，得到返回值作为输出"></a>3.2. 通过输入，得到返回值作为输出</h4><p>我们对函数的认识，是通过返回值取得函数结果。如果不遵循此规则，则应在函数名中有所体现，减少误解。<br>如</p>
+<h3 id="“函数”的基本规范"><a href="#“函数”的基本规范" class="headerlink" title="“函数”的基本规范"></a>“函数”的基本规范</h3><h4 id="无副作用"><a href="#无副作用" class="headerlink" title="无副作用"></a>无副作用</h4><p>什么是副作用呢？就是函数在干了本职工作外，还干了其它事情，导致状态的改变。如无法避免此问题，则应通过某种方式（如函数名、注释等）告诉函数调用者，降低问题的排查难度。同时，这种做法也违反了函数的单一职责原则。</p>
+<h4 id="通过输入，得到返回值作为输出"><a href="#通过输入，得到返回值作为输出" class="headerlink" title="通过输入，得到返回值作为输出"></a>通过输入，得到返回值作为输出</h4><p>我们对函数的认识，是通过返回值取得函数结果。如果不遵循此规则，则应在函数名中有所体现，减少误解。<br>如</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void corvert(StringBuilder source) &#123;...&#125;</span><br><span class="line"></span><br><span class="line">corvert(source);</span><br></pre></td></tr></table></figure>
 <p>更好的写法应该是</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public StringBuilder corvert(StringBuilder source) &#123;...&#125;</span><br><span class="line"></span><br><span class="line">source = corvert(source);</span><br></pre></td></tr></table></figure>
-<h4 id="3-3-要么回答什么事，要么做什么事"><a href="#3-3-要么回答什么事，要么做什么事" class="headerlink" title="3.3. 要么回答什么事，要么做什么事"></a>3.3. 要么回答什么事，要么做什么事</h4><p>一个函数应该只做一类事，要么回答什么事，要么做什么事。如果一个函数既要做什么事又要将做事的结果返回，就容易增加逻辑复杂度。<br>例如如下业务场景：要求更新数据库，更新前要先判断数据是否存在，并返回是否更新的结果<br>粗陋的写法：</p>
+<h4 id="要么回答什么事，要么做什么事"><a href="#要么回答什么事，要么做什么事" class="headerlink" title="要么回答什么事，要么做什么事"></a>要么回答什么事，要么做什么事</h4><p>一个函数应该只做一类事，要么回答什么事，要么做什么事。如果一个函数既要做什么事又要将做事的结果返回，就容易增加逻辑复杂度。<br>例如如下业务场景：要求更新数据库，更新前要先判断数据是否存在，并返回是否更新的结果<br>粗陋的写法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public boolean updateDb(String name) &#123;</span><br><span class="line">	boolean exist = exist(name);</span><br><span class="line">	if (!exist) &#123;</span><br><span class="line">		dao.update(name);</span><br><span class="line">		return true;</span><br><span class="line">	&#125;</span><br><span class="line">	return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>更优雅的写法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">boolean exist = exist(name);</span><br><span class="line">if (!exist) &#123;</span><br><span class="line">	updateDb(name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void updateDb(String name) &#123;</span><br><span class="line">	dao.update(name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>此写法也更好的体现了抽象层次的分层效果。<br>另外，如果某操作成功时要做XXX，失败时要做YYY，可以考虑用异常来代替操作失败的状态码，毕竟异常有助于分析问题原因。</p>
-<h4 id="3-4-抽取重复代码"><a href="#3-4-抽取重复代码" class="headerlink" title="3.4. 抽取重复代码"></a>3.4. 抽取重复代码</h4><p>函数的目的之一，就是减少重复代码。重复代码只有在复制黏贴时很爽，维护起来就很郁闷了，极容易改了这个忘了那个。</p>
-<h3 id="3-5-switch语句"><a href="#3-5-switch语句" class="headerlink" title="3.5. switch语句"></a>3.5. switch语句</h3><p>对于switch语句，可以考虑用策略模式或工厂模式替换。</p>
+<h4 id="抽取重复代码"><a href="#抽取重复代码" class="headerlink" title="抽取重复代码"></a>抽取重复代码</h4><p>函数的目的之一，就是减少重复代码。重复代码只有在复制黏贴时很爽，维护起来就很郁闷了，极容易改了这个忘了那个。</p>
+<h4 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h4><p>对于switch语句，可以考虑用策略模式或工厂模式替换。</p>
 
       
     </div>
@@ -647,7 +647,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#代码整洁之道"><span class="nav-number">1.</span> <span class="nav-text">代码整洁之道</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何判断代码的好坏"><span class="nav-number">1.1.</span> <span class="nav-text">如何判断代码的好坏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名"><span class="nav-number">1.2.</span> <span class="nav-text">命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-自顶向下，每个函数一个抽象层级"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 自顶向下，每个函数一个抽象层级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-函数参数的数量、顺序与类型"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 函数参数的数量、顺序与类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-“函数”的基本规范"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. “函数”的基本规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-无副作用"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">3.1. 无副作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-通过输入，得到返回值作为输出"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">3.2. 通过输入，得到返回值作为输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-要么回答什么事，要么做什么事"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">3.3. 要么回答什么事，要么做什么事</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-抽取重复代码"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">3.4. 抽取重复代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-switch语句"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.5. switch语句</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#代码整洁之道"><span class="nav-number">1.</span> <span class="nav-text">代码整洁之道</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何判断代码的好坏"><span class="nav-number">1.1.</span> <span class="nav-text">如何判断代码的好坏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名"><span class="nav-number">1.2.</span> <span class="nav-text">命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自顶向下，每个函数一个抽象层级"><span class="nav-number">1.3.1.</span> <span class="nav-text">自顶向下，每个函数一个抽象层级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数参数的数量、顺序与类型"><span class="nav-number">1.3.2.</span> <span class="nav-text">函数参数的数量、顺序与类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#“函数”的基本规范"><span class="nav-number">1.3.3.</span> <span class="nav-text">“函数”的基本规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无副作用"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">无副作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过输入，得到返回值作为输出"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">通过输入，得到返回值作为输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#要么回答什么事，要么做什么事"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">要么回答什么事，要么做什么事</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽取重复代码"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">抽取重复代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#switch语句"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">switch语句</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
